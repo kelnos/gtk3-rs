@@ -50,7 +50,7 @@
             </section>
         ` };
 
-        if ("master" == "master") {
+        if ("0.14" == "master") {
             document.body.insertAdjacentHTML(
                 'beforeend',
                 popup("This is the development version. Go to latest stable version.", "stable/latest")
@@ -59,7 +59,7 @@
             fetch('https://gtk-rs.org/gtk3-rs/LATEST_RELEASE_BRANCH')
                 .then(response => response.text())
                 .then(latest_branch => {
-                    if (latest_branch.trim() != "master") {
+                    if (latest_branch.trim() != "0.14") {
                         document.body.insertAdjacentHTML(
                             'beforeend',
                             popup("This version is outdated. Go to latest version.", "stable/latest")
@@ -195,6 +195,8 @@
 <span id="122">122</span>
 <span id="123">123</span>
 <span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
 </pre><pre class="rust">
 <span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
@@ -233,6 +235,8 @@
 <span class="doccomment">/// a terminal area widget called “terminal” and a toplevel window “toplevel”:</span>
 <span class="doccomment">///</span>
 <span class="doccomment">///</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// **⚠️ The following code is in C ⚠️**</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// ```C</span>
 <span class="doccomment">///     GdkGeometry hints;</span>
