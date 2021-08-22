@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk&#x2F;src&#x2F;keys.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>keys.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk&#x2F;src&#x2F;keys.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>keys.rs - source</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../light.css"  id="themeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css" disabled ><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled ><script id="default-settings" ></script><script src="../../storage.js"></script><script src="../../crates.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><style type="text/css">#crate-search{background-image:url("../../down-arrow.svg");}</style></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -2463,8 +2463,7 @@
 <span id="2390">2390</span>
 <span id="2391">2391</span>
 <span id="2392">2392</span>
-</pre><pre class="rust">
-<span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
+</pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">use</span> <span class="ident">glib::translate</span>::<span class="kw-2">*</span>;
 <span class="kw">use</span> <span class="ident">glib::GString</span>;
@@ -2581,7 +2580,7 @@
 
 <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">non_upper_case_globals</span>)]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">constants</span> {
-    <span class="kw">use</span> <span class="kw">super</span><span class="ident">::Key</span>;
+    <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::Key</span>;
 
     <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">VoidSymbol</span>: <span class="ident">Key</span> <span class="op">=</span> <span class="ident">Key</span>(<span class="ident">ffi::GDK_KEY_VoidSymbol</span> <span class="kw">as</span> <span class="ident">u32</span>);
     <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">BackSpace</span>: <span class="ident">Key</span> <span class="op">=</span> <span class="ident">Key</span>(<span class="ident">ffi::GDK_KEY_BackSpace</span> <span class="kw">as</span> <span class="ident">u32</span>);
@@ -4856,7 +4855,7 @@
     <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">LogWindowTree</span>: <span class="ident">Key</span> <span class="op">=</span> <span class="ident">Key</span>(<span class="ident">ffi::GDK_KEY_LogWindowTree</span> <span class="kw">as</span> <span class="ident">u32</span>);
     <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">LogGrabInfo</span>: <span class="ident">Key</span> <span class="op">=</span> <span class="ident">Key</span>(<span class="ident">ffi::GDK_KEY_LogGrabInfo</span> <span class="kw">as</span> <span class="ident">u32</span>);
 }
-</pre></div>
+</code></pre></div>
 </section><section id="search" class="content hidden"></section><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gdk" data-search-index-js="../../search-index.js" data-search-js="../../search.js"></div>
     <script src="../../main.js"></script><script src="../../source-script.js"></script><script src="../../source-files.js"></script>
 </body></html>
