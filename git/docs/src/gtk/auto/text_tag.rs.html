@@ -5842,9 +5842,9 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// result of signal emission (whether the event was handled)</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_text_tag_event&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">event</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">glib::Object</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">event</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">event_object</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">event_object</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">glib::Object</span><span class="op">&gt;</span>,
         <span class="ident">event</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Event</span>,
         <span class="ident">iter</span>: <span class="kw-2">&amp;</span><span class="ident">TextIter</span>,
     ) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span>;
@@ -6591,9 +6591,9 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">event</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">glib::Object</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">event</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">event_object</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">event_object</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">glib::Object</span><span class="op">&gt;</span>,
         <span class="ident">event</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::Event</span>,
         <span class="ident">iter</span>: <span class="kw-2">&amp;</span><span class="ident">TextIter</span>,
     ) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span> {

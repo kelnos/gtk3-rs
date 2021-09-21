@@ -1545,7 +1545,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">child</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">child</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -1714,7 +1714,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">parent</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">parent</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -1864,7 +1864,7 @@
     <span class="doccomment">///  reference ends of `self`, then `padding` pixels are also put between</span>
     <span class="doccomment">///  `child` and the reference edge of `self`</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_pack_end&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">pack_end</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>);
+    <span class="kw">fn</span> <span class="ident">pack_end</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>);
 
     <span class="doccomment">/// Adds `child` to `self`, packed with reference to the start of `self`.</span>
     <span class="doccomment">/// The `child` is packed after any other child packed with reference</span>
@@ -1888,7 +1888,7 @@
     <span class="doccomment">///  reference ends of `self`, then `padding` pixels are also put between</span>
     <span class="doccomment">///  `child` and the reference edge of `self`</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_pack_start&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">pack_start</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>);
+    <span class="kw">fn</span> <span class="ident">pack_start</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>);
 
     <span class="doccomment">/// Obtains information about how `child` is packed into `self`.</span>
     <span class="doccomment">/// ## `child`</span>
@@ -1913,7 +1913,7 @@
     <span class="doccomment">/// pointer to return location for pack-type</span>
     <span class="doccomment">///  child property</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_query_child_packing&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">query_child_packing</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> (<span class="ident">bool</span>, <span class="ident">bool</span>, <span class="ident">u32</span>, <span class="ident">PackType</span>);
+    <span class="kw">fn</span> <span class="ident">query_child_packing</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> (<span class="ident">bool</span>, <span class="ident">bool</span>, <span class="ident">u32</span>, <span class="ident">PackType</span>);
 
     <span class="doccomment">/// Moves `child` to a new `position` in the list of `self` children.</span>
     <span class="doccomment">/// The list contains widgets packed [`PackType::Start`][crate::PackType::Start]</span>
@@ -1931,7 +1931,7 @@
     <span class="doccomment">///  of `self`, starting from 0. If negative, indicates the end of</span>
     <span class="doccomment">///  the list</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_reorder_child&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">reorder_child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">position</span>: <span class="ident">i32</span>);
+    <span class="kw">fn</span> <span class="ident">reorder_child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">position</span>: <span class="ident">i32</span>);
 
     <span class="doccomment">/// Sets the baseline position of a box. This affects</span>
     <span class="doccomment">/// only horizontal boxes with at least one baseline aligned</span>
@@ -1951,7 +1951,7 @@
     <span class="doccomment">/// ## `widget`</span>
     <span class="doccomment">/// the widget to center</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_set_center_widget&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">set_center_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">P</span><span class="op">&gt;</span>);
+    <span class="kw">fn</span> <span class="ident">set_center_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>);
 
     <span class="doccomment">/// Sets the way `child` is packed into `self`.</span>
     <span class="doccomment">/// ## `child`</span>
@@ -1965,9 +1965,9 @@
     <span class="doccomment">/// ## `pack_type`</span>
     <span class="doccomment">/// the new value of the pack-type child property</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_box_set_child_packing&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">set_child_packing</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">set_child_packing</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">expand</span>: <span class="ident">bool</span>,
         <span class="ident">fill</span>: <span class="ident">bool</span>,
         <span class="ident">padding</span>: <span class="ident">u32</span>,
@@ -2055,7 +2055,7 @@
         <span class="kw">unsafe</span> { <span class="ident">ffi::gtk_box_get_spacing</span>(<span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="kw">fn</span> <span class="ident">pack_end</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>) {
+    <span class="kw">fn</span> <span class="ident">pack_end</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_box_pack_end</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2067,7 +2067,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">pack_start</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>) {
+    <span class="kw">fn</span> <span class="ident">pack_start</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">expand</span>: <span class="ident">bool</span>, <span class="ident">fill</span>: <span class="ident">bool</span>, <span class="ident">padding</span>: <span class="ident">u32</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_box_pack_start</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2079,7 +2079,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">query_child_packing</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> (<span class="ident">bool</span>, <span class="ident">bool</span>, <span class="ident">u32</span>, <span class="ident">PackType</span>) {
+    <span class="kw">fn</span> <span class="ident">query_child_packing</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> (<span class="ident">bool</span>, <span class="ident">bool</span>, <span class="ident">u32</span>, <span class="ident">PackType</span>) {
         <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">expand</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">fill</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
@@ -2106,7 +2106,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">reorder_child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">position</span>: <span class="ident">i32</span>) {
+    <span class="kw">fn</span> <span class="ident">reorder_child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">position</span>: <span class="ident">i32</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_box_reorder_child</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2125,7 +2125,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">set_center_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">P</span><span class="op">&gt;</span>) {
+    <span class="kw">fn</span> <span class="ident">set_center_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_box_set_center_widget</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2134,9 +2134,9 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">set_child_packing</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">set_child_packing</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">expand</span>: <span class="ident">bool</span>,
         <span class="ident">fill</span>: <span class="ident">bool</span>,
         <span class="ident">padding</span>: <span class="ident">u32</span>,

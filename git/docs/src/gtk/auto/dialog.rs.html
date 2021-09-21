@@ -1534,7 +1534,7 @@
 
     <span class="comment">//#[doc(alias = &quot;gtk_dialog_new_with_buttons&quot;)]</span>
     <span class="comment">//#[doc(alias = &quot;new_with_buttons&quot;)]</span>
-    <span class="comment">//pub fn with_buttons&lt;P: IsA&lt;Window&gt;&gt;(title: Option&lt;&amp;str&gt;, parent: Option&lt;&amp;P&gt;, flags: DialogFlags, first_button_text: Option&lt;&amp;str&gt;, : /*Unknown conversion*//*Unimplemented*/Fundamental: VarArgs) -&gt; Dialog {</span>
+    <span class="comment">//pub fn with_buttons(title: Option&lt;&amp;str&gt;, parent: Option&lt;&amp;impl IsA&lt;Window&gt;&gt;, flags: DialogFlags, first_button_text: Option&lt;&amp;str&gt;, : /*Unknown conversion*//*Unimplemented*/Fundamental: VarArgs) -&gt; Dialog {</span>
     <span class="comment">//    unsafe { TODO: call ffi:gtk_dialog_new_with_buttons() }</span>
     <span class="comment">//}</span>
 
@@ -1859,7 +1859,7 @@
     <span class="doccomment">/// Normally, the connection between the application and the window</span>
     <span class="doccomment">/// will remain until the window is destroyed, but you can explicitly</span>
     <span class="doccomment">/// remove it by setting the :application property to [`None`].</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">application</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Application</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">application</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">application</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">application</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Application</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">application</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">application</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -1871,7 +1871,7 @@
     <span class="doccomment">/// for instance a [`Menu`][crate::Menu] created by a [`ComboBox`][crate::ComboBox], a completion</span>
     <span class="doccomment">/// popup window created by [`Entry`][crate::Entry] or a typeahead search entry</span>
     <span class="doccomment">/// created by [`TreeView`][crate::TreeView].</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">attached_to</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">attached_to</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">attached_to</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">attached_to</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">attached_to</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">attached_to</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -1997,7 +1997,7 @@
 
     <span class="doccomment">/// The transient parent of the window. See [`GtkWindowExt::set_transient_for()`][crate::prelude::GtkWindowExt::set_transient_for()] for</span>
     <span class="doccomment">/// more details about transient windows.</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">transient_for</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Window</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">transient_for</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">transient_for</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">transient_for</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Window</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">transient_for</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">transient_for</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2027,7 +2027,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">child</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">child</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2196,7 +2196,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">parent</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">parent</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2291,7 +2291,7 @@
     <span class="doccomment">/// ## `response_id`</span>
     <span class="doccomment">/// response ID for `child`</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_dialog_add_action_widget&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">add_action_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">response_id</span>: <span class="ident">ResponseType</span>);
+    <span class="kw">fn</span> <span class="ident">add_action_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">response_id</span>: <span class="ident">ResponseType</span>);
 
     <span class="doccomment">/// Adds a button with the given text and sets things up so that</span>
     <span class="doccomment">/// clicking the button will emit the `signal::Dialog::response` signal with</span>
@@ -2343,7 +2343,7 @@
     <span class="doccomment">///  if `widget` doesn’t have a response id set.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_dialog_get_response_for_widget&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_response_for_widget&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">response_for_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ResponseType</span>;
+    <span class="kw">fn</span> <span class="ident">response_for_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ResponseType</span>;
 
     <span class="doccomment">/// Gets the widget button that uses the given response ID in the action area</span>
     <span class="doccomment">/// of a dialog.</span>
@@ -2471,7 +2471,7 @@
 }
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">O</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Dialog</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">DialogExt</span> <span class="kw">for</span> <span class="ident">O</span> {
-    <span class="kw">fn</span> <span class="ident">add_action_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">response_id</span>: <span class="ident">ResponseType</span>) {
+    <span class="kw">fn</span> <span class="ident">add_action_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">response_id</span>: <span class="ident">ResponseType</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_dialog_add_action_widget</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -2511,7 +2511,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">response_for_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ResponseType</span> {
+    <span class="kw">fn</span> <span class="ident">response_for_widget</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">ResponseType</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_dialog_get_response_for_widget</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,

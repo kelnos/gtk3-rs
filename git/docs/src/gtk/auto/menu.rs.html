@@ -2205,7 +2205,7 @@
     <span class="doccomment">/// a new [`Menu`][crate::Menu]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_new_from_model&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;new_from_model&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_model</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::MenuModel</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">model</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Menu</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_model</span>(<span class="ident">model</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">gio::MenuModel</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Menu</span> {
         <span class="macro">assert_initialized_main_thread!</span>();
         <span class="kw">unsafe</span> {
             <span class="ident">Widget::from_glib_none</span>(<span class="ident">ffi::gtk_menu_new_from_model</span>(
@@ -2234,7 +2234,7 @@
     <span class="doccomment">///  of menus attached to his widget.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_get_for_attach_widget&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_for_attach_widget&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">for_attach_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">for_attach_widget</span>(<span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span> {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">unsafe</span> {
             <span class="ident">FromGlibPtrContainer::from_glib_none</span>(<span class="ident">ffi::gtk_menu_get_for_attach_widget</span>(
@@ -2472,7 +2472,7 @@
     }
 
     <span class="doccomment">/// The accel group holding accelerators for the menu.</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">accel_group</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">accel_group</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">accel_group</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">accel_group</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">accel_group</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">accel_group</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2514,7 +2514,7 @@
     <span class="doccomment">/// The widget the menu is attached to. Setting this property attaches</span>
     <span class="doccomment">/// the menu without a `GtkMenuDetachFunc`. If you need to use a detacher,</span>
     <span class="doccomment">/// use `gtk_menu_attach_to_widget()` directly.</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">attach_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">attach_widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">attach_widget</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">attach_widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">attach_widget</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">attach_widget</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2587,7 +2587,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">child</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">child</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">child</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2756,7 +2756,7 @@
         <span class="self">self</span>
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">parent</span>(<span class="kw-2">mut</span> <span class="self">self</span>, <span class="ident">parent</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Container</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
         <span class="self">self</span>.<span class="ident">parent</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">parent</span>.<span class="ident">clone</span>().<span class="ident">upcast</span>());
         <span class="self">self</span>
     }
@@ -2858,9 +2858,9 @@
     <span class="doccomment">/// ## `bottom_attach`</span>
     <span class="doccomment">/// The row number to attach the bottom of the item to</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_attach&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">attach</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">attach</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">left_attach</span>: <span class="ident">u32</span>,
         <span class="ident">right_attach</span>: <span class="ident">u32</span>,
         <span class="ident">top_attach</span>: <span class="ident">u32</span>,
@@ -2868,7 +2868,7 @@
     );
 
     <span class="comment">//#[doc(alias = &quot;gtk_menu_attach_to_widget&quot;)]</span>
-    <span class="comment">//fn attach_to_widget&lt;P: IsA&lt;Widget&gt;&gt;(&amp;self, attach_widget: &amp;P, detacher: Option&lt;Box_&lt;dyn FnOnce(&amp;Widget, &amp;Menu) + &#39;static&gt;&gt;);</span>
+    <span class="comment">//fn attach_to_widget(&amp;self, attach_widget: &amp;impl IsA&lt;Widget&gt;, detacher: Option&lt;Box_&lt;dyn FnOnce(&amp;Widget, &amp;Menu) + &#39;static&gt;&gt;);</span>
 
     <span class="doccomment">/// Detaches the menu from the widget to which it had been attached.</span>
     <span class="doccomment">/// This function will call the callback function, `detacher`, provided</span>
@@ -2950,7 +2950,7 @@
 
     <span class="comment">//#[cfg_attr(feature = &quot;v3_22&quot;, deprecated = &quot;Since 3.22&quot;)]</span>
     <span class="comment">//#[doc(alias = &quot;gtk_menu_popup&quot;)]</span>
-    <span class="comment">//fn popup&lt;P: IsA&lt;Widget&gt;, Q: IsA&lt;Widget&gt;&gt;(&amp;self, parent_menu_shell: Option&lt;&amp;P&gt;, parent_menu_item: Option&lt;&amp;Q&gt;, func: Option&lt;Box_&lt;dyn FnOnce(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32);</span>
+    <span class="comment">//fn popup(&amp;self, parent_menu_shell: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, parent_menu_item: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, func: Option&lt;Box_&lt;dyn FnOnce(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32);</span>
 
     <span class="doccomment">/// Displays `self` and makes it available for selection.</span>
     <span class="doccomment">///</span>
@@ -3045,9 +3045,9 @@
     <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_22&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
     <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_22&quot;</span>)))]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_popup_at_widget&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">popup_at_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">popup_at_widget</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">widget_anchor</span>: <span class="ident">gdk::Gravity</span>,
         <span class="ident">menu_anchor</span>: <span class="ident">gdk::Gravity</span>,
         <span class="ident">trigger_event</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">gdk::Event</span><span class="op">&gt;</span>,
@@ -3055,7 +3055,7 @@
 
     <span class="comment">//#[cfg_attr(feature = &quot;v3_22&quot;, deprecated = &quot;Since 3.22&quot;)]</span>
     <span class="comment">//#[doc(alias = &quot;gtk_menu_popup_for_device&quot;)]</span>
-    <span class="comment">//fn popup_for_device&lt;P: IsA&lt;Widget&gt;, Q: IsA&lt;Widget&gt;&gt;(&amp;self, device: Option&lt;&amp;gdk::Device&gt;, parent_menu_shell: Option&lt;&amp;P&gt;, parent_menu_item: Option&lt;&amp;Q&gt;, func: Option&lt;Box_&lt;dyn Fn(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32);</span>
+    <span class="comment">//fn popup_for_device(&amp;self, device: Option&lt;&amp;gdk::Device&gt;, parent_menu_shell: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, parent_menu_item: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, func: Option&lt;Box_&lt;dyn Fn(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32);</span>
 
     <span class="doccomment">/// Moves `child` to a new `position` in the list of `self`</span>
     <span class="doccomment">/// children.</span>
@@ -3065,7 +3065,7 @@
     <span class="doccomment">/// the new position to place `child`.</span>
     <span class="doccomment">///  Positions are numbered from 0 to n - 1</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_reorder_child&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">reorder_child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">position</span>: <span class="ident">i32</span>);
+    <span class="kw">fn</span> <span class="ident">reorder_child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">position</span>: <span class="ident">i32</span>);
 
     <span class="doccomment">/// Repositions the menu according to its position function.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_reposition&quot;</span>)]</span>
@@ -3080,7 +3080,7 @@
     <span class="doccomment">/// the [`AccelGroup`][crate::AccelGroup] to be associated</span>
     <span class="doccomment">///  with the menu.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_menu_set_accel_group&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">set_accel_group</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">accel_group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">P</span><span class="op">&gt;</span>);
+    <span class="kw">fn</span> <span class="ident">set_accel_group</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">accel_group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span><span class="op">&gt;</span>);
 
     <span class="doccomment">/// Sets an accelerator path for this menu from which accelerator paths</span>
     <span class="doccomment">/// for its immediate children, its menu items, can be constructed.</span>
@@ -3327,9 +3327,9 @@
 }
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">O</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Menu</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">GtkMenuExt</span> <span class="kw">for</span> <span class="ident">O</span> {
-    <span class="kw">fn</span> <span class="ident">attach</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">attach</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">left_attach</span>: <span class="ident">u32</span>,
         <span class="ident">right_attach</span>: <span class="ident">u32</span>,
         <span class="ident">top_attach</span>: <span class="ident">u32</span>,
@@ -3347,7 +3347,7 @@
         }
     }
 
-    <span class="comment">//fn attach_to_widget&lt;P: IsA&lt;Widget&gt;&gt;(&amp;self, attach_widget: &amp;P, detacher: Option&lt;Box_&lt;dyn FnOnce(&amp;Widget, &amp;Menu) + &#39;static&gt;&gt;) {</span>
+    <span class="comment">//fn attach_to_widget(&amp;self, attach_widget: &amp;impl IsA&lt;Widget&gt;, detacher: Option&lt;Box_&lt;dyn FnOnce(&amp;Widget, &amp;Menu) + &#39;static&gt;&gt;) {</span>
     <span class="comment">//    unsafe { TODO: call ffi:gtk_menu_attach_to_widget() }</span>
     <span class="comment">//}</span>
 
@@ -3410,7 +3410,7 @@
         }
     }
 
-    <span class="comment">//fn popup&lt;P: IsA&lt;Widget&gt;, Q: IsA&lt;Widget&gt;&gt;(&amp;self, parent_menu_shell: Option&lt;&amp;P&gt;, parent_menu_item: Option&lt;&amp;Q&gt;, func: Option&lt;Box_&lt;dyn FnOnce(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32) {</span>
+    <span class="comment">//fn popup(&amp;self, parent_menu_shell: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, parent_menu_item: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, func: Option&lt;Box_&lt;dyn FnOnce(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32) {</span>
     <span class="comment">//    unsafe { TODO: call ffi:gtk_menu_popup() }</span>
     <span class="comment">//}</span>
 
@@ -3449,9 +3449,9 @@
 
     <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_22&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
     <span class="attribute">#[<span class="ident">cfg_attr</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>, <span class="ident">doc</span>(<span class="ident">cfg</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_22&quot;</span>)))]</span>
-    <span class="kw">fn</span> <span class="ident">popup_at_widget</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(
+    <span class="kw">fn</span> <span class="ident">popup_at_widget</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
-        <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>,
+        <span class="ident">widget</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>,
         <span class="ident">widget_anchor</span>: <span class="ident">gdk::Gravity</span>,
         <span class="ident">menu_anchor</span>: <span class="ident">gdk::Gravity</span>,
         <span class="ident">trigger_event</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">gdk::Event</span><span class="op">&gt;</span>,
@@ -3467,11 +3467,11 @@
         }
     }
 
-    <span class="comment">//fn popup_for_device&lt;P: IsA&lt;Widget&gt;, Q: IsA&lt;Widget&gt;&gt;(&amp;self, device: Option&lt;&amp;gdk::Device&gt;, parent_menu_shell: Option&lt;&amp;P&gt;, parent_menu_item: Option&lt;&amp;Q&gt;, func: Option&lt;Box_&lt;dyn Fn(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32) {</span>
+    <span class="comment">//fn popup_for_device(&amp;self, device: Option&lt;&amp;gdk::Device&gt;, parent_menu_shell: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, parent_menu_item: Option&lt;&amp;impl IsA&lt;Widget&gt;&gt;, func: Option&lt;Box_&lt;dyn Fn(&amp;Menu, i32, i32, bool) + &#39;static&gt;&gt;, button: u32, activate_time: u32) {</span>
     <span class="comment">//    unsafe { TODO: call ffi:gtk_menu_popup_for_device() }</span>
     <span class="comment">//}</span>
 
-    <span class="kw">fn</span> <span class="ident">reorder_child</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="ident">P</span>, <span class="ident">position</span>: <span class="ident">i32</span>) {
+    <span class="kw">fn</span> <span class="ident">reorder_child</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">child</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Widget</span><span class="op">&gt;</span>, <span class="ident">position</span>: <span class="ident">i32</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_menu_reorder_child</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -3487,7 +3487,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">set_accel_group</span><span class="op">&lt;</span><span class="ident">P</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">accel_group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">P</span><span class="op">&gt;</span>) {
+    <span class="kw">fn</span> <span class="ident">set_accel_group</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">accel_group</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">AccelGroup</span><span class="op">&gt;</span><span class="op">&gt;</span>) {
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_menu_set_accel_group</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
