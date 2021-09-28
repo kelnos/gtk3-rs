@@ -369,10 +369,10 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// # Returns</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// a new [`Cursor`][crate::Cursor]</span>
+    <span class="doccomment">/// a new [`Cursor`][crate::Cursor], or [`None`] on failure</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_cursor_new_for_display&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;new_for_display&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">for_display</span>(<span class="ident">display</span>: <span class="kw-2">&amp;</span><span class="ident">Display</span>, <span class="ident">cursor_type</span>: <span class="ident">CursorType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">Cursor</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">for_display</span>(<span class="ident">display</span>: <span class="kw-2">&amp;</span><span class="ident">Display</span>, <span class="ident">cursor_type</span>: <span class="ident">CursorType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Cursor</span><span class="op">&gt;</span> {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_full</span>(<span class="ident">ffi::gdk_cursor_new_for_display</span>(
