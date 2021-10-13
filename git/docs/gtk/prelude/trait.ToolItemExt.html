@@ -103,37 +103,37 @@
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_visible_horizontal_notify" class="fnname">connect_visible_horizontal_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_visible_vertical_notify" class="fnname">connect_visible_vertical_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 </details>}</code></pre></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Trait containing all <a href="../struct.ToolItem.html" title="ToolItem"><code>ToolItem</code></a> methods.</p>
-<h1 id="implementors-1" class="section-header"><a href="#implementors-1">Implementors</a></h1>
+<h2 id="implementors-1" class="section-header"><a href="#implementors-1">Implementors</a></h2>
 <p><a href="../struct.SeparatorToolItem.html" title="crate::SeparatorToolItem"><code>SeparatorToolItem</code></a>, <a href="../struct.ToolButton.html" title="crate::ToolButton"><code>ToolButton</code></a>, <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a></p>
 </div></details><h2 id="required-methods" class="small-section-header">Required methods<a href="#required-methods" class="anchor"></a></h2><div class="methods"><details class="rustdoc-toggle" open><summary><div id="tymethod.ellipsize_mode" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#538" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.ellipsize_mode" class="fnname">ellipsize_mode</a>(&amp;self) -&gt; <a class="enum" href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/enums/enum.EllipsizeMode.html" title="enum pango::auto::enums::EllipsizeMode">EllipsizeMode</a></h4></div></summary><div class="docblock"><p>Returns the ellipsize mode used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function to find out how text should
 be ellipsized.</p>
-<h1 id="returns" class="section-header"><a href="#returns">Returns</a></h1>
+<h5 id="returns" class="section-header"><a href="#returns">Returns</a></h5>
 <p>a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/enums/enum.EllipsizeMode.html" title="crate::pango::EllipsizeMode"><code>pango::EllipsizeMode</code></a> indicating how text in <code>self</code>
 should be ellipsized.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.expands" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#548" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.expands" class="fnname">expands</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether <code>self</code> is allocated extra space.
 See <a href="trait.ToolItemExt.html#tymethod.set_expand" title="Self::set_expand()"><code>set_expand()</code></a>.</p>
-<h1 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h1>
+<h5 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if <code>self</code> is allocated extra space.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.is_homogeneous" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#559" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.is_homogeneous" class="fnname">is_homogeneous</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether <code>self</code> is the same size as other homogeneous
 items. See <a href="trait.ToolItemExt.html#tymethod.set_homogeneous" title="Self::set_homogeneous()"><code>set_homogeneous()</code></a>.</p>
-<h1 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h1>
+<h5 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the item is the same size as other homogeneous
 items.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.icon_size" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#571" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.icon_size" class="fnname">icon_size</a>(&amp;self) -&gt; <a class="enum" href="../enum.IconSize.html" title="enum gtk::IconSize">IconSize</a></h4></div></summary><div class="docblock"><p>Returns the icon size used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function to find out what size icons
 they should use.</p>
-<h1 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h1>
+<h5 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h5>
 <p>a <a href="../enum.IconSize.html" title="crate::IconSize"><code>IconSize</code></a> indicating the icon size
 used for <code>self</code></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.is_important" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#581" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.is_important" class="fnname">is_important</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether <code>self</code> is considered important. See
 <a href="trait.ToolItemExt.html#tymethod.set_is_important" title="Self::set_is_important()"><code>set_is_important()</code></a></p>
-<h1 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h1>
+<h5 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if <code>self</code> is considered important.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.orientation" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#593" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.orientation" class="fnname">orientation</a>(&amp;self) -&gt; <a class="enum" href="../enum.Orientation.html" title="enum gtk::Orientation">Orientation</a></h4></div></summary><div class="docblock"><p>Returns the orientation used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function to find out what size icons
 they should use.</p>
-<h1 id="returns-5" class="section-header"><a href="#returns-5">Returns</a></h1>
+<h5 id="returns-5" class="section-header"><a href="#returns-5">Returns</a></h5>
 <p>a <a href="../enum.Orientation.html" title="crate::Orientation"><code>Orientation</code></a> indicating the orientation
 used for <code>self</code></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.proxy_menu_item" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#612" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.proxy_menu_item" class="fnname">proxy_menu_item</a>(&amp;self, menu_item_id: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../struct.Widget.html" title="struct gtk::Widget">Widget</a>&gt;</h4></div></summary><div class="docblock"><p>If <code>menu_item_id</code> matches the string passed to
@@ -142,9 +142,9 @@ used for <code>self</code></p>
 update their menu item when the <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> changes. That the
 <code>menu_item_ids</code> must match ensures that a <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a>
 will not inadvertently change a menu item that they did not create.</p>
-<h2 id="menu_item_id" class="section-header"><a href="#menu_item_id"><code>menu_item_id</code></a></h2>
+<h6 id="menu_item_id" class="section-header"><a href="#menu_item_id"><code>menu_item_id</code></a></h6>
 <p>a string used to identify the menu item</p>
-<h1 id="returns-6" class="section-header"><a href="#returns-6">Returns</a></h1>
+<h5 id="returns-6" class="section-header"><a href="#returns-6">Returns</a></h5>
 <p>The <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a> passed to
 <a href="trait.ToolItemExt.html#tymethod.set_proxy_menu_item" title="Self::set_proxy_menu_item()"><code>set_proxy_menu_item()</code></a>, if the <code>menu_item_ids</code>
 match.</p>
@@ -152,25 +152,25 @@ match.</p>
 Custom subclasses of <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function in the handler
 of the <code>signal::ToolItem::toolbar_reconfigured</code> signal to find out the
 relief style of buttons.</p>
-<h1 id="returns-7" class="section-header"><a href="#returns-7">Returns</a></h1>
+<h5 id="returns-7" class="section-header"><a href="#returns-7">Returns</a></h5>
 <p>a <a href="../enum.ReliefStyle.html" title="crate::ReliefStyle"><code>ReliefStyle</code></a> indicating the relief style used
 for <code>self</code>.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.text_alignment" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#637" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.text_alignment" class="fnname">text_alignment</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a></h4></div></summary><div class="docblock"><p>Returns the text alignment used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function to find out how text should
 be aligned.</p>
-<h1 id="returns-8" class="section-header"><a href="#returns-8">Returns</a></h1>
+<h5 id="returns-8" class="section-header"><a href="#returns-8">Returns</a></h5>
 <p>a <code>gfloat</code> indicating the horizontal text alignment
 used for <code>self</code></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.text_orientation" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#649" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.text_orientation" class="fnname">text_orientation</a>(&amp;self) -&gt; <a class="enum" href="../enum.Orientation.html" title="enum gtk::Orientation">Orientation</a></h4></div></summary><div class="docblock"><p>Returns the text orientation used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function to find out how text should
 be orientated.</p>
-<h1 id="returns-9" class="section-header"><a href="#returns-9">Returns</a></h1>
+<h5 id="returns-9" class="section-header"><a href="#returns-9">Returns</a></h5>
 <p>a <a href="../enum.Orientation.html" title="crate::Orientation"><code>Orientation</code></a> indicating the text orientation
 used for <code>self</code></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.text_size_group" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#660" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.text_size_group" class="fnname">text_size_group</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../struct.SizeGroup.html" title="struct gtk::SizeGroup">SizeGroup</a>&gt;</h4></div></summary><div class="docblock"><p>Returns the size group used for labels in <code>self</code>.
 Custom subclasses of <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function
 and use the size group for labels.</p>
-<h1 id="returns-10" class="section-header"><a href="#returns-10">Returns</a></h1>
+<h5 id="returns-10" class="section-header"><a href="#returns-10">Returns</a></h5>
 <p>a <a href="../struct.SizeGroup.html" title="crate::SizeGroup"><code>SizeGroup</code></a></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.toolbar_style" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#681" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.toolbar_style" class="fnname">toolbar_style</a>(&amp;self) -&gt; <a class="enum" href="../enum.ToolbarStyle.html" title="enum gtk::ToolbarStyle">ToolbarStyle</a></h4></div></summary><div class="docblock"><p>Returns the toolbar style used for <code>self</code>. Custom subclasses of
 <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a> should call this function in the handler of the
@@ -185,21 +185,21 @@ both an icon and a label, stacked vertically</li>
 <li><a href="../enum.ToolbarStyle.html#variant.BothHoriz" title="crate::ToolbarStyle::BothHoriz"><code>ToolbarStyle::BothHoriz</code></a>, meaning the tool item should show
 both an icon and a label, arranged horizontally</li>
 </ul>
-<h1 id="returns-11" class="section-header"><a href="#returns-11">Returns</a></h1>
+<h5 id="returns-11" class="section-header"><a href="#returns-11">Returns</a></h5>
 <p>A <a href="../enum.ToolbarStyle.html" title="crate::ToolbarStyle"><code>ToolbarStyle</code></a> indicating the toolbar style used
 for <code>self</code>.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.uses_drag_window" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#691" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.uses_drag_window" class="fnname">uses_drag_window</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether <code>self</code> has a drag window. See
 <a href="trait.ToolItemExt.html#tymethod.set_use_drag_window" title="Self::set_use_drag_window()"><code>set_use_drag_window()</code></a>.</p>
-<h1 id="returns-12" class="section-header"><a href="#returns-12">Returns</a></h1>
+<h5 id="returns-12" class="section-header"><a href="#returns-12">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if <code>self</code> uses a drag window.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.is_visible_horizontal" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#702" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.is_visible_horizontal" class="fnname">is_visible_horizontal</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether the <code>self</code> is visible on toolbars that are
 docked horizontally.</p>
-<h1 id="returns-13" class="section-header"><a href="#returns-13">Returns</a></h1>
+<h5 id="returns-13" class="section-header"><a href="#returns-13">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if <code>self</code> is visible on toolbars that are
 docked horizontally.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.is_visible_vertical" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#712" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.is_visible_vertical" class="fnname">is_visible_vertical</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Returns whether <code>self</code> is visible when the toolbar is docked vertically.
 See <a href="trait.ToolItemExt.html#tymethod.set_visible_vertical" title="Self::set_visible_vertical()"><code>set_visible_vertical()</code></a>.</p>
-<h1 id="returns-14" class="section-header"><a href="#returns-14">Returns</a></h1>
+<h5 id="returns-14" class="section-header"><a href="#returns-14">Returns</a></h5>
 <p>Whether <code>self</code> is visible when the toolbar is docked vertically</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.rebuild_menu" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#722" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.rebuild_menu" class="fnname">rebuild_menu</a>(&amp;self)</h4></div></summary><div class="docblock"><p>Calling this function signals to the toolbar that the
 overflow menu item for <code>self</code> has changed. If the
@@ -210,49 +210,49 @@ will do in response to the <code>signal::ToolItem::create-menu-proxy</code> sign
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.retrieve_proxy_menu_item" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#733" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.retrieve_proxy_menu_item" class="fnname">retrieve_proxy_menu_item</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../struct.Widget.html" title="struct gtk::Widget">Widget</a>&gt;</h4></div></summary><div class="docblock"><p>Returns the <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a> that was last set by
 <a href="trait.ToolItemExt.html#tymethod.set_proxy_menu_item" title="Self::set_proxy_menu_item()"><code>set_proxy_menu_item()</code></a>, ie. the <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a>
 that is going to appear in the overflow menu.</p>
-<h1 id="returns-15" class="section-header"><a href="#returns-15">Returns</a></h1>
+<h5 id="returns-15" class="section-header"><a href="#returns-15">Returns</a></h5>
 <p>The <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a> that is going to appear in the
 overflow menu for <code>self</code>.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_expand" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#742" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_expand" class="fnname">set_expand</a>(&amp;self, expand: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> is allocated extra space when there
 is more room on the toolbar then needed for the items. The
 effect is that the item gets bigger when the toolbar gets bigger
 and smaller when the toolbar gets smaller.</p>
-<h2 id="expand" class="section-header"><a href="#expand"><code>expand</code></a></h2>
+<h6 id="expand" class="section-header"><a href="#expand"><code>expand</code></a></h6>
 <p>Whether <code>self</code> is allocated extra space</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_homogeneous" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#750" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_homogeneous" class="fnname">set_homogeneous</a>(&amp;self, homogeneous: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> is to be allocated the same size as other
 homogeneous items. The effect is that all homogeneous items will have
 the same width as the widest of the items.</p>
-<h2 id="homogeneous" class="section-header"><a href="#homogeneous"><code>homogeneous</code></a></h2>
+<h6 id="homogeneous" class="section-header"><a href="#homogeneous"><code>homogeneous</code></a></h6>
 <p>whether <code>self</code> is the same size as other homogeneous items</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_is_important" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#760" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_is_important" class="fnname">set_is_important</a>(&amp;self, is_important: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> should be considered important. The <a href="../struct.ToolButton.html" title="crate::ToolButton"><code>ToolButton</code></a>
 class uses this property to determine whether to show or hide its label
 when the toolbar style is <a href="../enum.ToolbarStyle.html#variant.BothHoriz" title="crate::ToolbarStyle::BothHoriz"><code>ToolbarStyle::BothHoriz</code></a>. The result is that
 only tool buttons with the “is_important” property set have labels, an
 effect known as “priority text”</p>
-<h2 id="is_important" class="section-header"><a href="#is_important"><code>is_important</code></a></h2>
+<h6 id="is_important" class="section-header"><a href="#is_important"><code>is_important</code></a></h6>
 <p>whether the tool item should be considered important</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_proxy_menu_item" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#772" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_proxy_menu_item" class="fnname">set_proxy_menu_item</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;menu_item_id: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;menu_item: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;impl <a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.Widget.html" title="struct gtk::Widget">Widget</a>&gt;&gt;<br>)</h4></div></summary><div class="docblock"><p>Sets the <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a> used in the toolbar overflow menu. The
 <code>menu_item_id</code> is used to identify the caller of this function and
 should also be used with <a href="trait.ToolItemExt.html#tymethod.proxy_menu_item" title="Self::proxy_menu_item()"><code>proxy_menu_item()</code></a>.</p>
 <p>See also <code>signal::ToolItem::create-menu-proxy</code>.</p>
-<h2 id="menu_item_id-1" class="section-header"><a href="#menu_item_id-1"><code>menu_item_id</code></a></h2>
+<h6 id="menu_item_id-1" class="section-header"><a href="#menu_item_id-1"><code>menu_item_id</code></a></h6>
 <p>a string used to identify <code>menu_item</code></p>
-<h2 id="menu_item" class="section-header"><a href="#menu_item"><code>menu_item</code></a></h2>
+<h6 id="menu_item" class="section-header"><a href="#menu_item"><code>menu_item</code></a></h6>
 <p>a <a href="../struct.MenuItem.html" title="crate::MenuItem"><code>MenuItem</code></a> to use in the overflow menu, or <a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None" title="None"><code>None</code></a></p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_use_drag_window" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#781" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_use_drag_window" class="fnname">set_use_drag_window</a>(&amp;self, use_drag_window: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> has a drag window. When <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> the
 toolitem can be used as a drag source through <a href="trait.WidgetExtManual.html#tymethod.drag_source_set" title="crate::prelude::WidgetExtManual::drag_source_set()"><code>WidgetExtManual::drag_source_set()</code></a>.
 When <code>self</code> has a drag window it will intercept all events,
 even those that would otherwise be sent to a child of <code>self</code>.</p>
-<h2 id="use_drag_window" class="section-header"><a href="#use_drag_window"><code>use_drag_window</code></a></h2>
+<h6 id="use_drag_window" class="section-header"><a href="#use_drag_window"><code>use_drag_window</code></a></h6>
 <p>Whether <code>self</code> has a drag window.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_visible_horizontal" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#787" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_visible_horizontal" class="fnname">set_visible_horizontal</a>(&amp;self, visible_horizontal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> is visible when the toolbar is docked horizontally.</p>
-<h2 id="visible_horizontal" class="section-header"><a href="#visible_horizontal"><code>visible_horizontal</code></a></h2>
+<h6 id="visible_horizontal" class="section-header"><a href="#visible_horizontal"><code>visible_horizontal</code></a></h6>
 <p>Whether <code>self</code> is visible when in horizontal mode</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_visible_vertical" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#797" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_visible_vertical" class="fnname">set_visible_vertical</a>(&amp;self, visible_vertical: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether <code>self</code> is visible when the toolbar is docked
 vertically. Some tool items, such as text entries, are too wide to be
 useful on a vertically docked toolbar. If <code>visible_vertical</code> is <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a>
 <code>self</code> will not appear on toolbars that are docked vertically.</p>
-<h2 id="visible_vertical" class="section-header"><a href="#visible_vertical"><code>visible_vertical</code></a></h2>
+<h6 id="visible_vertical" class="section-header"><a href="#visible_vertical"><code>visible_vertical</code></a></h6>
 <p>whether <code>self</code> is visible when the toolbar
 is in vertical mode</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.toolbar_reconfigured" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#803" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.toolbar_reconfigured" class="fnname">toolbar_reconfigured</a>(&amp;self)</h4></div></summary><div class="docblock"><p>Emits the signal <code>signal::ToolItem::toolbar_reconfigured</code> on <code>self</code>.
@@ -281,7 +281,7 @@ a later handler installs a menu item.</p>
 how it will respond to this signal it must call <a href="trait.ToolItemExt.html#tymethod.rebuild_menu" title="Self::rebuild_menu()"><code>rebuild_menu()</code></a>
 to invalidate the cache and ensure that the toolbar rebuilds its overflow
 menu.</p>
-<h1 id="returns-16" class="section-header"><a href="#returns-16">Returns</a></h1>
+<h5 id="returns-16" class="section-header"><a href="#returns-16">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the signal was handled, <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a> if not</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_toolbar_reconfigured" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/tool_item.rs.html#844" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.connect_toolbar_reconfigured" class="fnname">connect_toolbar_reconfigured</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>This signal is emitted when some property of the toolbar that the
 item is a child of changes. For custom subclasses of <a href="../struct.ToolItem.html" title="crate::ToolItem"><code>ToolItem</code></a>,

@@ -82,38 +82,38 @@ undefined), and also prints warnings to stderr in cases where it
 should return a useful error to the program. You are advised to use
 XGetWindowProperty() directly until a replacement function for
 <a href="fn.property_get.html" title="crate::property_get()"><code>property_get()</code></a> is provided.</p>
-<h2 id="window" class="section-header"><a href="#window"><code>window</code></a></h2>
+<h3 id="window" class="section-header"><a href="#window"><code>window</code></a></h3>
 <p>a <a href="../struct.Window.html" title="crate::Window"><code>Window</code></a></p>
-<h2 id="property" class="section-header"><a href="#property"><code>property</code></a></h2>
+<h3 id="property" class="section-header"><a href="#property"><code>property</code></a></h3>
 <p>the property to retrieve</p>
-<h2 id="type_" class="section-header"><a href="#type_"><code>type_</code></a></h2>
+<h3 id="type_" class="section-header"><a href="#type_"><code>type_</code></a></h3>
 <p>the desired property type, or <code>GDK_NONE</code>, if any type of data
 is acceptable. If this does not match the actual
 type, then <code>actual_format</code> and <code>actual_length</code> will
 be filled in, a warning will be printed to stderr
 and no data will be returned.</p>
-<h2 id="offset" class="section-header"><a href="#offset"><code>offset</code></a></h2>
+<h3 id="offset" class="section-header"><a href="#offset"><code>offset</code></a></h3>
 <p>the offset into the property at which to begin
 retrieving data, in 4 byte units.</p>
-<h2 id="length" class="section-header"><a href="#length"><code>length</code></a></h2>
+<h3 id="length" class="section-header"><a href="#length"><code>length</code></a></h3>
 <p>the length of the data to retrieve in bytes. Data is
 considered to be retrieved in 4 byte chunks, so <code>length</code>
 will be rounded up to the next highest 4 byte boundary
 (so be careful not to pass a value that might overflow
 when rounded up).</p>
-<h2 id="pdelete" class="section-header"><a href="#pdelete"><code>pdelete</code></a></h2>
+<h3 id="pdelete" class="section-header"><a href="#pdelete"><code>pdelete</code></a></h3>
 <p>if <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a>, delete the property after retrieving the
 data.</p>
-<h1 id="returns" class="section-header"><a href="#returns">Returns</a></h1>
+<h2 id="returns" class="section-header"><a href="#returns">Returns</a></h2>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if data was successfully received and stored
 in <code>data</code>, otherwise <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a>.</p>
-<h2 id="actual_property_type" class="section-header"><a href="#actual_property_type"><code>actual_property_type</code></a></h2>
+<h3 id="actual_property_type" class="section-header"><a href="#actual_property_type"><code>actual_property_type</code></a></h3>
 <p>location to store the
 actual type of the property.</p>
-<h2 id="actual_format" class="section-header"><a href="#actual_format"><code>actual_format</code></a></h2>
+<h3 id="actual_format" class="section-header"><a href="#actual_format"><code>actual_format</code></a></h3>
 <p>location to store the actual return format of the
 data; either 8, 16 or 32 bits.</p>
-<h2 id="data" class="section-header"><a href="#data"><code>data</code></a></h2>
+<h3 id="data" class="section-header"><a href="#data"><code>data</code></a></h3>
 <p>location
 to store a pointer to the data. The retrieved data should be
 freed with <code>g_free()</code> when you are finished using it.</p>

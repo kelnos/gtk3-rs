@@ -324,7 +324,7 @@
     <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">RelationSet</span>(<span class="ident">Object</span><span class="op">&lt;</span><span class="ident">ffi::AtkRelationSet</span>, <span class="ident">ffi::AtkRelationSetClass</span><span class="op">&gt;</span>);
 
     <span class="kw">match</span> <span class="kw">fn</span> {
-        <span class="ident">type_</span> <span class="op">=</span><span class="op">&gt;</span> <span class="op">|</span><span class="op">|</span> <span class="ident">ffi::atk_relation_set_get_type</span>(),
+        <span class="ident">type_</span> =&gt; <span class="op">|</span><span class="op">|</span> <span class="ident">ffi::atk_relation_set_get_type</span>(),
     }
 }
 
@@ -335,14 +335,14 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// a new [`RelationSet`][crate::RelationSet]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_new&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>() <span class="op">-</span><span class="op">&gt;</span> <span class="ident">RelationSet</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>() -&gt; <span class="ident">RelationSet</span> {
         <span class="macro">assert_initialized_main_thread!</span>();
         <span class="kw">unsafe</span> { <span class="ident">from_glib_full</span>(<span class="ident">ffi::atk_relation_set_new</span>()) }
     }
 }
 
 <span class="kw">impl</span> <span class="ident">Default</span> <span class="kw">for</span> <span class="ident">RelationSet</span> {
-    <span class="kw">fn</span> <span class="ident">default</span>() <span class="op">-</span><span class="op">&gt;</span> <span class="self">Self</span> {
+    <span class="kw">fn</span> <span class="ident">default</span>() -&gt; <span class="self">Self</span> {
         <span class="ident"><span class="self">Self</span>::new</span>()
     }
 }
@@ -386,7 +386,7 @@
     <span class="doccomment">/// [`true`] if `relationship` is the relationship type of a relation</span>
     <span class="doccomment">/// in `self`, [`false`] otherwise</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_contains&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">contains</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span>;
+    <span class="kw">fn</span> <span class="ident">contains</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Determines whether the relation set contains a relation that</span>
     <span class="doccomment">/// matches the specified pair formed by type `relationship` and object</span>
@@ -401,7 +401,7 @@
     <span class="doccomment">/// [`true`] if `self` contains a relation with the relationship</span>
     <span class="doccomment">/// type `relationship` with an object `target`, [`false`] otherwise</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_contains_target&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">contains_target</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>, <span class="ident">target</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Object</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span>;
+    <span class="kw">fn</span> <span class="ident">contains_target</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>, <span class="ident">target</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Object</span><span class="op">&gt;</span>) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Determines the number of relations in a relation set.</span>
     <span class="doccomment">///</span>
@@ -410,7 +410,7 @@
     <span class="doccomment">/// an integer representing the number of relations in the set.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_get_n_relations&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_n_relations&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">n_relations</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">i32</span>;
+    <span class="kw">fn</span> <span class="ident">n_relations</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">i32</span>;
 
     <span class="doccomment">/// Determines the relation at the specified position in the relation set.</span>
     <span class="doccomment">/// ## `i`</span>
@@ -422,7 +422,7 @@
     <span class="doccomment">/// position i in the set.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_get_relation&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_relation&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">relation</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">i</span>: <span class="ident">i32</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">relation</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">i</span>: <span class="ident">i32</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span>;
 
     <span class="doccomment">/// Finds a relation that matches the specified type.</span>
     <span class="doccomment">/// ## `relationship`</span>
@@ -434,7 +434,7 @@
     <span class="doccomment">/// specified type.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;atk_relation_set_get_relation_by_type&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_relation_by_type&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">relation_by_type</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span>;
+    <span class="kw">fn</span> <span class="ident">relation_by_type</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span>;
 
     <span class="doccomment">/// Removes a relation from the relation set.</span>
     <span class="doccomment">/// This function unref&#39;s the [`Relation`][crate::Relation] so it will be deleted unless there</span>
@@ -465,7 +465,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">contains</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span> {
+    <span class="kw">fn</span> <span class="ident">contains</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::atk_relation_set_contains</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -474,7 +474,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">contains_target</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>, <span class="ident">target</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Object</span><span class="op">&gt;</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span> {
+    <span class="kw">fn</span> <span class="ident">contains_target</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>, <span class="ident">target</span>: <span class="kw-2">&amp;</span><span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Object</span><span class="op">&gt;</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::atk_relation_set_contains_target</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -484,11 +484,11 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">n_relations</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">i32</span> {
+    <span class="kw">fn</span> <span class="ident">n_relations</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="ident">i32</span> {
         <span class="kw">unsafe</span> { <span class="ident">ffi::atk_relation_set_get_n_relations</span>(<span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>) }
     }
 
-    <span class="kw">fn</span> <span class="ident">relation</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">i</span>: <span class="ident">i32</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">relation</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">i</span>: <span class="ident">i32</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::atk_relation_set_get_relation</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -497,7 +497,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">relation_by_type</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span> {
+    <span class="kw">fn</span> <span class="ident">relation_by_type</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">relationship</span>: <span class="ident">RelationType</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Relation</span><span class="op">&gt;</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib_none</span>(<span class="ident">ffi::atk_relation_set_get_relation_by_type</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -517,7 +517,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">RelationSet</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;RelationSet&quot;</span>)
     }
 }

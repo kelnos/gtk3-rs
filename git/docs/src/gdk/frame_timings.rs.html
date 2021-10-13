@@ -168,7 +168,7 @@
     <span class="doccomment">///  presentation time is available.</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_frame_timings_get_predicted_presentation_time&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_predicted_presentation_time&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">predicted_presentation_time</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">predicted_presentation_time</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
         <span class="kw">let</span> <span class="ident">predicted_presentation_time</span> <span class="op">=</span> <span class="kw">unsafe</span> {
             <span class="ident">ffi::gdk_frame_timings_get_predicted_presentation_time</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)
         };
@@ -188,7 +188,7 @@
     <span class="doccomment">///  time is available. See [`is_complete()`][Self::is_complete()]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_frame_timings_get_presentation_time&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_presentation_time&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">presentation_time</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">presentation_time</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
         <span class="kw">let</span> <span class="ident">presentation_time</span> <span class="op">=</span>
             <span class="kw">unsafe</span> { <span class="ident">ffi::gdk_frame_timings_get_presentation_time</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) };
         <span class="comment">// assuming presentation time is always positive</span>
@@ -208,7 +208,7 @@
     <span class="doccomment">///  See [`is_complete()`][Self::is_complete()].</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_frame_timings_get_refresh_interval&quot;</span>)]</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;get_refresh_interval&quot;</span>)]</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">refresh_interval</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-</span><span class="op">&gt;</span> <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">refresh_interval</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">NonZeroU64</span><span class="op">&gt;</span> {
         <span class="kw">let</span> <span class="ident">refresh_interval</span> <span class="op">=</span>
             <span class="kw">unsafe</span> { <span class="ident">ffi::gdk_frame_timings_get_refresh_interval</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>) };
         <span class="comment">// assuming refresh interval is always positive</span>

@@ -82,37 +82,37 @@
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_page_changed" class="fnname">connect_page_changed</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_reload" class="fnname">connect_reload</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(&amp;self, f: F) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 }</code></pre></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Trait containing all <a href="../struct.Document.html" title="Document"><code>Document</code></a> methods.</p>
-<h1 id="implementors-1" class="section-header"><a href="#implementors-1">Implementors</a></h1>
+<h2 id="implementors-1" class="section-header"><a href="#implementors-1">Implementors</a></h2>
 <p><a href="../struct.Document.html" title="crate::Document"><code>Document</code></a>, <a href="../struct.NoOpObject.html" title="crate::NoOpObject"><code>NoOpObject</code></a></p>
 </div></details><h2 id="required-methods" class="small-section-header">Required methods<a href="#required-methods" class="anchor"></a></h2><div class="methods"><details class="rustdoc-toggle" open><summary><div id="tymethod.attribute_value" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#54" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.attribute_value" class="fnname">attribute_value</a>(&amp;self, attribute_name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html" title="struct glib::gstring::GString">GString</a>&gt;</h4></div></summary><div class="docblock"><p>Retrieves the value of the given <code>attribute_name</code> inside <code>self</code>.</p>
-<h2 id="attribute_name" class="section-header"><a href="#attribute_name"><code>attribute_name</code></a></h2>
+<h6 id="attribute_name" class="section-header"><a href="#attribute_name"><code>attribute_name</code></a></h6>
 <p>a character string representing the name of the attribute
 whose value is being queried.</p>
-<h1 id="returns" class="section-header"><a href="#returns">Returns</a></h1>
+<h5 id="returns" class="section-header"><a href="#returns">Returns</a></h5>
 <p>a string value associated with the named
 attribute for this document, or <a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None" title="None"><code>None</code></a> if a value for
 <code>attribute_name</code> has not been specified for this document.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.current_page_number" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#68" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.current_page_number" class="fnname">current_page_number</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></h4></div></summary><div class="docblock"><p>Retrieves the current page number inside <code>self</code>.</p>
-<h1 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h1>
+<h5 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h5>
 <p>the current page number inside <code>self</code>, or -1 if
 not implemented, not know by the implementor, or irrelevant.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.document_type" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#86" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.document_type" class="fnname">document_type</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html" title="struct glib::gstring::GString">GString</a>&gt;</h4></div></summary><div class="docblock"><p>Gets a string indicating the document type.</p>
-<h1 id="deprecated" class="section-header"><a href="#deprecated">Deprecated</a></h1>
+<h5 id="deprecated" class="section-header"><a href="#deprecated">Deprecated</a></h5>
 <p>Since 2.12. Please use <code>atk_document_get_attributes()</code> to
 ask for the document type if it applies.</p>
-<h1 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h1>
+<h5 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h5>
 <p>a string indicating the document type</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.page_count" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#96" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.page_count" class="fnname">page_count</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a></h4></div></summary><div class="docblock"><p>Retrieves the total number of pages inside <code>self</code>.</p>
-<h1 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h1>
+<h5 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h5>
 <p>total page count of <code>self</code>, or -1 if not implemented,
 not know by the implementor or irrelevant.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_attribute_value" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#111" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.set_attribute_value" class="fnname">set_attribute_value</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;attribute_name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;attribute_value: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><br>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Sets the value for the given <code>attribute_name</code> inside <code>self</code>.</p>
-<h2 id="attribute_name-1" class="section-header"><a href="#attribute_name-1"><code>attribute_name</code></a></h2>
+<h6 id="attribute_name-1" class="section-header"><a href="#attribute_name-1"><code>attribute_name</code></a></h6>
 <p>a character string representing the name of the attribute
 whose value is being set.</p>
-<h2 id="attribute_value" class="section-header"><a href="#attribute_value"><code>attribute_value</code></a></h2>
+<h6 id="attribute_value" class="section-header"><a href="#attribute_value"><code>attribute_value</code></a></h6>
 <p>a string value to be associated with <code>attribute_name</code>.</p>
-<h1 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h1>
+<h5 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if <code>attribute_value</code> is successfully associated
 with <code>attribute_name</code> for this <code>self</code>, and <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a> if if the
 document does not allow the attribute to be modified</p>
@@ -134,7 +134,7 @@ user-significant timeout has occurred.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_page_changed" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#141" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.connect_page_changed" class="fnname">connect_page_changed</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ‘page-changed’ signal is emitted when the current page of
 a document changes, e.g. pressing page up/down in a document
 viewer.</p>
-<h2 id="page_number" class="section-header"><a href="#page_number"><code>page_number</code></a></h2>
+<h6 id="page_number" class="section-header"><a href="#page_number"><code>page_number</code></a></h6>
 <p>the new page number. If this value is unknown
 or not applicable, -1 should be provided.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_reload" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/atk/auto/document.rs.html#149" title="goto source code">[src]</a></div><h4 class="code-header">fn <a href="#tymethod.connect_reload" class="fnname">connect_reload</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(&amp;self, f: F) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ‘reload’ signal is emitted when the contents of a

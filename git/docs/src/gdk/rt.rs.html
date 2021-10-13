@@ -162,7 +162,7 @@
 
 <span class="doccomment">/// Asserts that this is the main thread and either `gdk::init` or `gtk::init` has been called.</span>
 <span class="macro">macro_rules!</span> <span class="ident">assert_initialized_main_thread</span> {
-    () <span class="op">=</span><span class="op">&gt;</span> {
+    () =&gt; {
         <span class="kw">if</span> <span class="op">!</span><span class="ident"><span class="kw">crate</span>::rt::is_initialized_main_thread</span>() {
             <span class="kw">if</span> <span class="ident"><span class="kw">crate</span>::rt::is_initialized</span>() {
                 <span class="macro">panic!</span>(<span class="string">&quot;GDK may only be used from the main thread.&quot;</span>);
@@ -175,12 +175,12 @@
 
 <span class="doccomment">/// No-op.</span>
 <span class="macro">macro_rules!</span> <span class="ident">skip_assert_initialized</span> {
-    () <span class="op">=</span><span class="op">&gt;</span> {};
+    () =&gt; {};
 }
 
 <span class="doccomment">/// Asserts that neither `gdk::init` nor `gtk::init` has been called.</span>
 <span class="macro">macro_rules!</span> <span class="ident">assert_not_initialized</span> {
-    () <span class="op">=</span><span class="op">&gt;</span> {
+    () =&gt; {
         <span class="kw">if</span> <span class="ident"><span class="kw">crate</span>::rt::is_initialized</span>() {
             <span class="macro">panic!</span>(<span class="string">&quot;This function has to be called before `gdk::init` or `gtk::init`.&quot;</span>);
         }
@@ -189,14 +189,14 @@
 
 <span class="doccomment">/// Returns `true` if GDK has been initialized.</span>
 <span class="attribute">#[<span class="ident">inline</span>]</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">is_initialized</span>() <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">is_initialized</span>() -&gt; <span class="ident">bool</span> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="ident">INITIALIZED</span>.<span class="ident">load</span>(<span class="ident">Ordering::Acquire</span>)
 }
 
 <span class="doccomment">/// Returns `true` if GDK has been initialized and this is the main thread.</span>
 <span class="attribute">#[<span class="ident">inline</span>]</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">is_initialized_main_thread</span>() <span class="op">-</span><span class="op">&gt;</span> <span class="ident">bool</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">is_initialized_main_thread</span>() -&gt; <span class="ident">bool</span> {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="ident">IS_MAIN_THREAD</span>.<span class="ident">with</span>(<span class="op">|</span><span class="ident">c</span><span class="op">|</span> <span class="ident">c</span>.<span class="ident">get</span>())
 }
