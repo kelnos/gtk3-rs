@@ -146,6 +146,8 @@
 <span id="73">73</span>
 <span id="74">74</span>
 <span id="75">75</span>
+<span id="76">76</span>
+<span id="77">77</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="doccomment">//! General — Library initialization and miscellaneous functions</span>
@@ -181,6 +183,7 @@
 <span class="doccomment">/// Asserts that neither `gdk::init` nor `gtk::init` has been called.</span>
 <span class="macro">macro_rules!</span> <span class="ident">assert_not_initialized</span> {
     () =&gt; {
+        <span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy::if_then_panic</span>)]</span>
         <span class="kw">if</span> <span class="ident"><span class="kw">crate</span>::rt::is_initialized</span>() {
             <span class="macro">panic!</span>(<span class="string">&quot;This function has to be called before `gdk::init` or `gtk::init`.&quot;</span>);
         }
@@ -202,6 +205,7 @@
 }
 
 <span class="doccomment">/// Informs this crate that GDK has been initialized and the current thread is the main one.</span>
+<span class="attribute">#[<span class="ident">allow</span>(<span class="ident">clippy::if_then_panic</span>)]</span>
 <span class="kw">pub</span> <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">set_initialized</span>() {
     <span class="macro">skip_assert_initialized!</span>();
     <span class="kw">if</span> <span class="ident">is_initialized_main_thread</span>() {
