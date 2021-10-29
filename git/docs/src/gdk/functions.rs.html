@@ -293,7 +293,7 @@
 ) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">cairo::Region</span><span class="op">&gt;</span> {
     <span class="macro">assert_initialized_main_thread!</span>();
 
-    <span class="kw">let</span> <span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">i32</span> <span class="op">=</span> <span class="ident">index_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw">_</span>;
+    <span class="kw">let</span> <span class="ident">ptr</span>: <span class="kw-2">*const</span> <span class="ident">i32</span> <span class="op">=</span> <span class="ident">index_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw">_</span>;
     <span class="kw">unsafe</span> {
         <span class="ident">from_glib_full</span>(<span class="ident">ffi::gdk_pango_layout_line_get_clip_region</span>(
             <span class="ident">line</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -337,7 +337,7 @@
 ) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">cairo::Region</span><span class="op">&gt;</span> {
     <span class="macro">assert_initialized_main_thread!</span>();
 
-    <span class="kw">let</span> <span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">i32</span> <span class="op">=</span> <span class="ident">index_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw">_</span>;
+    <span class="kw">let</span> <span class="ident">ptr</span>: <span class="kw-2">*const</span> <span class="ident">i32</span> <span class="op">=</span> <span class="ident">index_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw">_</span>;
     <span class="kw">unsafe</span> {
         <span class="ident">from_glib_full</span>(<span class="ident">ffi::gdk_pango_layout_get_clip_region</span>(
             <span class="ident">layout</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,

@@ -344,23 +344,23 @@
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;GdkAtom&quot;</span>)]</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Atom</span>(<span class="ident">ffi::GdkAtom</span>);
 
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_PRIMARY</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">1</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_SECONDARY</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">2</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_CLIPBOARD</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">69</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_BITMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">5</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_COLORMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">7</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_DRAWABLE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">17</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_PIXMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">20</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_STRING</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">31</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_ATOM</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">4</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_BITMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">5</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_COLORMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">7</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_DRAWABLE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">17</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_INTEGER</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">19</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_PIXMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">20</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_WINDOW</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">33</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
-<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_STRING</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">31</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NONE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">0</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_PRIMARY</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">1</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_SECONDARY</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">2</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_CLIPBOARD</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">69</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_BITMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">5</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_COLORMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">7</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_DRAWABLE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">17</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_PIXMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">20</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">TARGET_STRING</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">31</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_ATOM</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">4</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_BITMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">5</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_COLORMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">7</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_DRAWABLE</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">17</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_INTEGER</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">19</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_PIXMAP</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">20</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_WINDOW</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">33</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">SELECTION_TYPE_STRING</span>: <span class="ident">Atom</span> <span class="op">=</span> <span class="ident">Atom</span>(<span class="number">31</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
 
 <span class="kw">impl</span> <span class="ident">Atom</span> {
     <span class="doccomment">/// Finds or creates an atom corresponding to a given string.</span>
@@ -424,39 +424,39 @@
     }
 }
 
-<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibPtrMut</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibPtrMut</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
     <span class="kw">type</span> <span class="ident">Storage</span> <span class="op">=</span> ();
 
     <span class="attribute">#[<span class="ident">inline</span>]</span>
-    <span class="kw">fn</span> <span class="ident">to_glib_none_mut</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="kw-2">mut</span> <span class="self">self</span>) -&gt; <span class="ident">StashMut</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">Atom</span><span class="op">&gt;</span> {
-        <span class="ident">StashMut</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="self">self</span>.<span class="number">0</span>, ())
+    <span class="kw">fn</span> <span class="ident">to_glib_none_mut</span>(<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="kw-2">mut</span> <span class="self">self</span>) -&gt; <span class="ident">StashMut</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">Atom</span><span class="op">&gt;</span> {
+        <span class="ident">StashMut</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="number">0</span>, ())
     }
 }
 
-<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibContainerFromSlice</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibContainerFromSlice</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span> {
     <span class="kw">type</span> <span class="ident">Storage</span> <span class="op">=</span> (
         <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Stash</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">ffi::GdkAtom</span>, <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span><span class="op">&gt;</span><span class="op">&gt;</span>,
         <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span><span class="op">&gt;</span>,
     );
 
-    <span class="kw">fn</span> <span class="ident">to_glib_none_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
+    <span class="kw">fn</span> <span class="ident">to_glib_none_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="kw">let</span> <span class="ident">v</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">t</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="ident">to_glib_none</span>()).<span class="ident">collect</span>();
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">v_ptr</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">v</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="number">0</span>).<span class="ident">collect</span>();
         <span class="ident">v_ptr</span>.<span class="ident">push</span>(<span class="ident">ptr::null_mut</span>());
 
-        (<span class="ident">v_ptr</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, (<span class="ident">v</span>, <span class="prelude-val">Some</span>(<span class="ident">v_ptr</span>)))
+        (<span class="ident">v_ptr</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, (<span class="ident">v</span>, <span class="prelude-val">Some</span>(<span class="ident">v_ptr</span>)))
     }
 
-    <span class="kw">fn</span> <span class="ident">to_glib_container_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
+    <span class="kw">fn</span> <span class="ident">to_glib_container_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="kw">let</span> <span class="ident">v</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">t</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="ident">to_glib_none</span>()).<span class="ident">collect</span>();
 
         <span class="kw">let</span> <span class="ident">v_ptr</span> <span class="op">=</span> <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">v_ptr</span> <span class="op">=</span> <span class="ident">glib::ffi::g_malloc0</span>(<span class="ident">mem::size_of</span>::<span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span>() <span class="op">*</span> (<span class="ident">t</span>.<span class="ident">len</span>() <span class="op">+</span> <span class="number">1</span>))
-                <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>;
+                <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>;
 
             <span class="kw">for</span> (<span class="ident">i</span>, <span class="ident">s</span>) <span class="kw">in</span> <span class="ident">v</span>.<span class="ident">iter</span>().<span class="ident">enumerate</span>() {
                 <span class="ident">ptr::write</span>(<span class="ident">v_ptr</span>.<span class="ident">add</span>(<span class="ident">i</span>), <span class="ident">s</span>.<span class="number">0</span>);
@@ -468,49 +468,49 @@
         (<span class="ident">v_ptr</span>, (<span class="ident">v</span>, <span class="prelude-val">None</span>))
     }
 
-    <span class="kw">fn</span> <span class="ident">to_glib_full_from_slice</span>(<span class="kw">_</span>: <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span> {
+    <span class="kw">fn</span> <span class="ident">to_glib_full_from_slice</span>(<span class="kw">_</span>: <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span> {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="macro">unimplemented!</span>()
     }
 }
 
-<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibContainerFromSlice</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span> {
+<span class="kw">impl</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span><span class="op">&gt;</span> <span class="ident">ToGlibContainerFromSlice</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span> {
     <span class="kw">type</span> <span class="ident">Storage</span> <span class="op">=</span> (
         <span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">Stash</span><span class="op">&lt;</span><span class="lifetime">&#39;a</span>, <span class="ident">ffi::GdkAtom</span>, <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span><span class="op">&gt;</span><span class="op">&gt;</span>,
         <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span><span class="op">&gt;</span>,
     );
 
-    <span class="kw">fn</span> <span class="ident">to_glib_none_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
+    <span class="kw">fn</span> <span class="ident">to_glib_none_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="kw">let</span> <span class="ident">v</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">t</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="ident">to_glib_none</span>()).<span class="ident">collect</span>();
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">v_ptr</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">v</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="number">0</span>).<span class="ident">collect</span>();
         <span class="ident">v_ptr</span>.<span class="ident">push</span>(<span class="ident">ptr::null_mut</span>());
 
-        (<span class="ident">v_ptr</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span>, (<span class="ident">v</span>, <span class="prelude-val">Some</span>(<span class="ident">v_ptr</span>)))
+        (<span class="ident">v_ptr</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span>, (<span class="ident">v</span>, <span class="prelude-val">Some</span>(<span class="ident">v_ptr</span>)))
     }
 
-    <span class="kw">fn</span> <span class="ident">to_glib_container_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
+    <span class="kw">fn</span> <span class="ident">to_glib_container_from_slice</span>(<span class="ident">t</span>: <span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> [<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; (<span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident"><span class="self">Self</span>::Storage</span>) {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="kw">let</span> <span class="ident">v</span>: <span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">t</span>.<span class="ident">iter</span>().<span class="ident">map</span>(<span class="op">|</span><span class="ident">s</span><span class="op">|</span> <span class="ident">s</span>.<span class="ident">to_glib_none</span>()).<span class="ident">collect</span>();
 
         <span class="kw">let</span> <span class="ident">v_ptr</span> <span class="op">=</span> <span class="kw">unsafe</span> {
             <span class="kw">let</span> <span class="ident">v_ptr</span> <span class="op">=</span> <span class="ident">glib::ffi::g_malloc0</span>(<span class="ident">mem::size_of</span>::<span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span>() <span class="op">*</span> (<span class="ident">t</span>.<span class="ident">len</span>() <span class="op">+</span> <span class="number">1</span>))
-                <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>;
+                <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>;
 
             <span class="kw">for</span> (<span class="ident">i</span>, <span class="ident">s</span>) <span class="kw">in</span> <span class="ident">v</span>.<span class="ident">iter</span>().<span class="ident">enumerate</span>() {
                 <span class="ident">ptr::write</span>(<span class="ident">v_ptr</span>.<span class="ident">add</span>(<span class="ident">i</span>), <span class="ident">s</span>.<span class="number">0</span>);
             }
 
-            <span class="ident">v_ptr</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span>
+            <span class="ident">v_ptr</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span>
         };
 
         (<span class="ident">v_ptr</span>, (<span class="ident">v</span>, <span class="prelude-val">None</span>))
     }
 
-    <span class="kw">fn</span> <span class="ident">to_glib_full_from_slice</span>(<span class="kw">_</span>: <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">ffi::GdkAtom</span> {
+    <span class="kw">fn</span> <span class="ident">to_glib_full_from_slice</span>(<span class="kw">_</span>: <span class="kw-2">&amp;</span>[<span class="kw-2">&amp;</span><span class="lifetime">&#39;a</span> <span class="ident">Atom</span>]) -&gt; <span class="kw-2">*const</span> <span class="ident">ffi::GdkAtom</span> {
         <span class="macro">skip_assert_initialized!</span>();
 
         <span class="macro">unimplemented!</span>()
@@ -538,8 +538,8 @@
     }
 }
 
-<span class="kw">impl</span> <span class="ident">FromGlibContainerAsVec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span>, <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_none_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+<span class="kw">impl</span> <span class="ident">FromGlibContainerAsVec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span>, <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_none_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="kw">if</span> <span class="ident">num</span> <span class="op">==</span> <span class="number">0</span> <span class="op">|</span><span class="op">|</span> <span class="ident">ptr</span>.<span class="ident">is_null</span>() {
             <span class="kw">return</span> <span class="ident">Vec::new</span>();
         }
@@ -551,13 +551,13 @@
         <span class="ident">res</span>
     }
 
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_container_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_container_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="kw">let</span> <span class="ident">res</span> <span class="op">=</span> <span class="ident">FromGlibContainerAsVec::from_glib_none_num_as_vec</span>(<span class="ident">ptr</span>, <span class="ident">num</span>);
-        <span class="ident">glib::ffi::g_free</span>(<span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
+        <span class="ident">glib::ffi::g_free</span>(<span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
         <span class="ident">res</span>
     }
 
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_full_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_full_num_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>, <span class="ident">num</span>: <span class="ident">usize</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="kw">if</span> <span class="ident">num</span> <span class="op">==</span> <span class="number">0</span> <span class="op">|</span><span class="op">|</span> <span class="ident">ptr</span>.<span class="ident">is_null</span>() {
             <span class="kw">return</span> <span class="ident">Vec::new</span>();
         }
@@ -566,21 +566,21 @@
         <span class="kw">for</span> <span class="ident">i</span> <span class="kw">in</span> <span class="number">0</span>..<span class="ident">num</span> {
             <span class="ident">res</span>.<span class="ident">push</span>(<span class="ident">from_glib_full</span>(<span class="ident">ptr::read</span>(<span class="ident">ptr</span>.<span class="ident">add</span>(<span class="ident">i</span>))));
         }
-        <span class="ident">glib::ffi::g_free</span>(<span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw">_</span>);
+        <span class="ident">glib::ffi::g_free</span>(<span class="ident">ptr</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw">_</span>);
         <span class="ident">res</span>
     }
 }
 
-<span class="kw">impl</span> <span class="ident">FromGlibPtrArrayContainerAsVec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span>, <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_none_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+<span class="kw">impl</span> <span class="ident">FromGlibPtrArrayContainerAsVec</span><span class="op">&lt;</span><span class="ident">ffi::GdkAtom</span>, <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span><span class="op">&gt;</span> <span class="kw">for</span> <span class="ident">Atom</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_none_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="ident">FromGlibContainerAsVec::from_glib_none_num_as_vec</span>(<span class="ident">ptr</span>, <span class="ident">c_ptr_array_len</span>(<span class="ident">ptr</span>))
     }
 
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_container_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_container_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="ident">FromGlibContainerAsVec::from_glib_container_num_as_vec</span>(<span class="ident">ptr</span>, <span class="ident">c_ptr_array_len</span>(<span class="ident">ptr</span>))
     }
 
-    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_full_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
+    <span class="kw">unsafe</span> <span class="kw">fn</span> <span class="ident">from_glib_full_as_vec</span>(<span class="ident">ptr</span>: <span class="kw-2">*mut</span> <span class="ident">ffi::GdkAtom</span>) -&gt; <span class="ident">Vec</span><span class="op">&lt;</span><span class="self">Self</span><span class="op">&gt;</span> {
         <span class="ident">FromGlibContainerAsVec::from_glib_full_num_as_vec</span>(<span class="ident">ptr</span>, <span class="ident">c_ptr_array_len</span>(<span class="ident">ptr</span>))
     }
 }

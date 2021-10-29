@@ -225,7 +225,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if the row was successfully deleted</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_tree_drag_source_drag_data_delete&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">drag_data_delete</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span>;
+    <span class="kw">fn</span> <span class="ident">drag_data_delete</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Asks the [`TreeDragSource`][crate::TreeDragSource] to fill in `selection_data` with a</span>
     <span class="doccomment">/// representation of the row at `path`. `selection_data`-&gt;target gives</span>
@@ -241,7 +241,7 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if data of the required type was provided</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_tree_drag_source_drag_data_get&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">drag_data_get</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>, <span class="ident">selection_data</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">SelectionData</span>) -&gt; <span class="ident">bool</span>;
+    <span class="kw">fn</span> <span class="ident">drag_data_get</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>, <span class="ident">selection_data</span>: <span class="kw-2">&amp;mut</span> <span class="ident">SelectionData</span>) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Asks the [`TreeDragSource`][crate::TreeDragSource] whether a particular row can be used as</span>
     <span class="doccomment">/// the source of a DND operation. If the source doesn’t implement</span>
@@ -253,11 +253,11 @@
     <span class="doccomment">///</span>
     <span class="doccomment">/// [`true`] if the row can be dragged</span>
     <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gtk_tree_drag_source_row_draggable&quot;</span>)]</span>
-    <span class="kw">fn</span> <span class="ident">row_draggable</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span>;
+    <span class="kw">fn</span> <span class="ident">row_draggable</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span>;
 }
 
 <span class="kw">impl</span><span class="op">&lt;</span><span class="ident">O</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">TreeDragSource</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="ident">TreeDragSourceExt</span> <span class="kw">for</span> <span class="ident">O</span> {
-    <span class="kw">fn</span> <span class="ident">drag_data_delete</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span> {
+    <span class="kw">fn</span> <span class="ident">drag_data_delete</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_tree_drag_source_drag_data_delete</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -266,7 +266,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">drag_data_get</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>, <span class="ident">selection_data</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">SelectionData</span>) -&gt; <span class="ident">bool</span> {
+    <span class="kw">fn</span> <span class="ident">drag_data_get</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>, <span class="ident">selection_data</span>: <span class="kw-2">&amp;mut</span> <span class="ident">SelectionData</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_tree_drag_source_drag_data_get</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -276,7 +276,7 @@
         }
     }
 
-    <span class="kw">fn</span> <span class="ident">row_draggable</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span> {
+    <span class="kw">fn</span> <span class="ident">row_draggable</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">path</span>: <span class="kw-2">&amp;mut</span> <span class="ident">TreePath</span>) -&gt; <span class="ident">bool</span> {
         <span class="kw">unsafe</span> {
             <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_tree_drag_source_row_draggable</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
@@ -287,7 +287,7 @@
 }
 
 <span class="kw">impl</span> <span class="ident">fmt::Display</span> <span class="kw">for</span> <span class="ident">TreeDragSource</span> {
-    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
+    <span class="kw">fn</span> <span class="ident">fmt</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">f</span>: <span class="kw-2">&amp;mut</span> <span class="ident">fmt::Formatter</span>) -&gt; <span class="ident">fmt::Result</span> {
         <span class="ident">f</span>.<span class="ident">write_str</span>(<span class="string">&quot;TreeDragSource&quot;</span>)
     }
 }

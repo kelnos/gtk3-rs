@@ -1287,7 +1287,7 @@
 <span class="doccomment">/// ## `angle`</span>
 <span class="doccomment">/// return location for the relative angle between both events</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_events_get_angle&quot;</span>)]</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_angle</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_angle</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> {
     <span class="macro">assert_initialized_main_thread!</span>();
     <span class="kw">unsafe</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">angle</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
@@ -1322,7 +1322,7 @@
 <span class="doccomment">/// ## `y`</span>
 <span class="doccomment">/// return location for the Y coordinate of the center</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_events_get_center&quot;</span>)]</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_center</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span>(<span class="ident">f64</span>, <span class="ident">f64</span>)<span class="op">&gt;</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_center</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span>(<span class="ident">f64</span>, <span class="ident">f64</span>)<span class="op">&gt;</span> {
     <span class="macro">assert_initialized_main_thread!</span>();
     <span class="kw">unsafe</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">x</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
@@ -1357,7 +1357,7 @@
 <span class="doccomment">/// ## `distance`</span>
 <span class="doccomment">/// return location for the distance</span>
 <span class="attribute">#[<span class="ident">doc</span>(<span class="ident">alias</span> <span class="op">=</span> <span class="string">&quot;gdk_events_get_distance&quot;</span>)]</span>
-<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_distance</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> {
+<span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">events_get_distance</span>(<span class="ident">event1</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>, <span class="ident">event2</span>: <span class="kw-2">&amp;mut</span> <span class="ident">Event</span>) -&gt; <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="ident">f64</span><span class="op">&gt;</span> {
     <span class="macro">assert_initialized_main_thread!</span>();
     <span class="kw">unsafe</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">distance</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
@@ -1726,7 +1726,7 @@
             <span class="ident">actual_property_type</span>.<span class="ident">to_glib_none_mut</span>().<span class="number">0</span>,
             <span class="ident">actual_format</span>.<span class="ident">as_mut_ptr</span>(),
             <span class="ident">actual_length</span>.<span class="ident">as_mut_ptr</span>(),
-            <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">data</span>,
+            <span class="kw-2">&amp;mut</span> <span class="ident">data</span>,
         ));
         <span class="kw">let</span> <span class="ident">actual_format</span> <span class="op">=</span> <span class="ident">actual_format</span>.<span class="ident">assume_init</span>();
         <span class="kw">if</span> <span class="ident">ret</span> {
@@ -1766,7 +1766,7 @@
     <span class="kw">unsafe</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">depths</span> <span class="op">=</span> <span class="ident">ptr::null_mut</span>();
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">count</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
-        <span class="ident">ffi::gdk_query_depths</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">depths</span>, <span class="ident">count</span>.<span class="ident">as_mut_ptr</span>());
+        <span class="ident">ffi::gdk_query_depths</span>(<span class="kw-2">&amp;mut</span> <span class="ident">depths</span>, <span class="ident">count</span>.<span class="ident">as_mut_ptr</span>());
         <span class="ident">FromGlibContainer::from_glib_none_num</span>(<span class="ident">depths</span>, <span class="ident">count</span>.<span class="ident">assume_init</span>() <span class="kw">as</span> <span class="ident">usize</span>)
     }
 }
@@ -2251,7 +2251,7 @@
             <span class="ident">format</span>,
             <span class="ident">text</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
             <span class="ident">length</span>,
-            <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">list</span>,
+            <span class="kw-2">&amp;mut</span> <span class="ident">list</span>,
         );
         (<span class="ident">ret</span>, <span class="ident">FromGlibPtrContainer::from_glib_full</span>(<span class="ident">list</span>))
     }

@@ -148,8 +148,8 @@
             <span class="ident">ffi::gdk_frame_clock_get_refresh_info</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">base_time</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">refresh_interval</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">presentation_time</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">refresh_interval</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">presentation_time</span>,
             );
             (<span class="ident">refresh_interval</span>, <span class="ident">presentation_time</span>)
         }

@@ -111,7 +111,7 @@
         <span class="kw">unsafe</span> {
             <span class="ident">ffi::gtk_print_settings_set_page_ranges</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="ident">mut_override</span>(<span class="ident">page_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="kw">_</span>),
+                <span class="ident">mut_override</span>(<span class="ident">page_ranges</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span>),
                 <span class="ident">num_ranges</span>,
             );
         }

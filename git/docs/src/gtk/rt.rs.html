@@ -362,7 +362,7 @@
         <span class="comment">// behaviors...</span>
         <span class="kw">let</span> <span class="ident">argv</span> <span class="op">=</span> <span class="ident">::std::env::args</span>().<span class="ident">take</span>(<span class="number">1</span>).<span class="ident">collect</span>::<span class="op">&lt;</span><span class="ident">Vec</span><span class="op">&lt;</span><span class="kw">_</span><span class="op">&gt;</span><span class="op">&gt;</span>();
 
-        <span class="kw">if</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_init_check</span>(<span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="number">1</span>, <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">argv</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) {
+        <span class="kw">if</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_init_check</span>(<span class="kw-2">&amp;mut</span> <span class="number">1</span>, <span class="kw-2">&amp;mut</span> <span class="ident">argv</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) {
             <span class="comment">// See https://github.com/gtk-rs/gtk-rs-core/issues/186 for reasoning behind</span>
             <span class="comment">// acquiring and leaking the main context here.</span>
             <span class="kw">let</span> <span class="ident">result</span>: <span class="ident">bool</span> <span class="op">=</span> <span class="ident">from_glib</span>(<span class="ident">glib::ffi::g_main_context_acquire</span>(

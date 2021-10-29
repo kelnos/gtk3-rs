@@ -157,7 +157,7 @@
             <span class="ident">proxy</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
             <span class="ident">mut_override</span>(<span class="ident">path</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>),
             <span class="ident">mut_override</span>(<span class="ident">iter</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>),
-            <span class="ident">mut_override</span>(<span class="ident">new_order</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw">const</span> <span class="ident">c_int</span>),
+            <span class="ident">mut_override</span>(<span class="ident">new_order</span>.<span class="ident">as_ptr</span>() <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">c_int</span>),
         );
     }
 }

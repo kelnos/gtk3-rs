@@ -532,7 +532,7 @@
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">n_atoms</span> <span class="op">=</span> <span class="ident">mem::MaybeUninit::uninit</span>();
             <span class="kw">let</span> <span class="ident">ret</span> <span class="op">=</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_selection_data_get_targets</span>(
                 <span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>,
-                <span class="kw-2">&amp;</span><span class="kw-2">mut</span> <span class="ident">targets</span>,
+                <span class="kw-2">&amp;mut</span> <span class="ident">targets</span>,
                 <span class="ident">n_atoms</span>.<span class="ident">as_mut_ptr</span>(),
             ));
             <span class="kw">if</span> <span class="ident">ret</span> {

@@ -134,7 +134,7 @@
             <span class="kw">if</span> <span class="ident">from_glib</span>(<span class="ident">ffi::gtk_gesture_stylus_get_axes</span>(
                 <span class="self">self</span>.<span class="ident">as_ref</span>().<span class="ident">to_glib_none</span>().<span class="number">0</span>,
                 <span class="ident">axes1</span>.<span class="ident">as_mut_ptr</span>(),
-                <span class="ident">values</span>.<span class="ident">as_mut_ptr</span>() <span class="kw">as</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="kw-2">*</span><span class="kw-2">mut</span> <span class="ident">f64</span>,
+                <span class="ident">values</span>.<span class="ident">as_mut_ptr</span>() <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="kw-2">*mut</span> <span class="ident">f64</span>,
             )) {
                 <span class="prelude-val">Some</span>(<span class="ident">values</span>)
             } <span class="kw">else</span> {
