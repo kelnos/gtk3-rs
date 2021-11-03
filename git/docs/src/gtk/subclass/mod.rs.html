@@ -145,6 +145,8 @@
 <span id="72">72</span>
 <span id="73">73</span>
 <span id="74">74</span>
+<span id="75">75</span>
+<span id="76">76</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">application</span>;
@@ -172,6 +174,7 @@
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">list_box_row</span>;
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">gdk_backend</span> <span class="op">=</span> <span class="string">&quot;x11&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">plug</span>;
+<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">scrolled_window</span>;
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">gdk_backend</span> <span class="op">=</span> <span class="string">&quot;x11&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">socket</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">stack</span>;
@@ -210,6 +213,7 @@
     <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::list_box_row</span>::{<span class="ident">ListBoxRowImpl</span>, <span class="ident">ListBoxRowImplExt</span>};
     <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">gdk_backend</span> <span class="op">=</span> <span class="string">&quot;x11&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
     <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::plug</span>::{<span class="ident">PlugImpl</span>, <span class="ident">PlugImplExt</span>};
+    <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::scrolled_window</span>::{<span class="ident">ScrolledWindowImpl</span>, <span class="ident">ScrolledWindowImplExt</span>};
     <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">gdk_backend</span> <span class="op">=</span> <span class="string">&quot;x11&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
     <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::socket</span>::{<span class="ident">SocketImpl</span>, <span class="ident">SocketImplExt</span>};
     <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">super</span>::stack::StackImpl</span>;
