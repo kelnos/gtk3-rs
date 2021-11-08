@@ -321,7 +321,7 @@
             <span class="kw">let</span> <span class="ident">callback</span>: <span class="kw-2">*mut</span> <span class="ident">P</span> <span class="op">=</span> <span class="ident">user_data</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="kw">_</span> <span class="kw">as</span> <span class="ident">usize</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">P</span>;
             <span class="kw">let</span> <span class="ident">func</span> <span class="op">=</span> (<span class="kw-2">*</span><span class="ident">callback</span>)(<span class="kw-2">&amp;</span><span class="ident">builder</span>, <span class="ident">handler_name</span>.<span class="ident">as_str</span>());
             <span class="ident">object</span>
-                .<span class="ident">connect_unsafe</span>(
+                .<span class="ident">try_connect_unsafe</span>(
                     <span class="ident">signal_name</span>.<span class="ident">as_str</span>(),
                     <span class="ident">flags</span> <span class="op">&amp;</span> <span class="ident">glib::gobject_ffi::G_CONNECT_AFTER</span> <span class="op">!</span><span class="op">=</span> <span class="number">0</span>,
                     <span class="kw">move</span> <span class="op">|</span><span class="ident">args</span><span class="op">|</span> <span class="ident">func</span>(<span class="ident">args</span>),
