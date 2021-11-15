@@ -563,7 +563,7 @@
     }
 
     <span class="doccomment">/// Finds the [`AccelGroup`][crate::AccelGroup] to which `closure` is connected;</span>
-    <span class="doccomment">/// see [`AccelGroupExtManual::connect()`][crate::prelude::AccelGroupExtManual::connect()].</span>
+    <span class="doccomment">/// see [`AccelGroupExtManual::connect_accel_group()`][crate::prelude::AccelGroupExtManual::connect_accel_group()].</span>
     <span class="doccomment">/// ## `closure`</span>
     <span class="doccomment">/// a [`glib::Closure`][crate::glib::Closure]</span>
     <span class="doccomment">///</span>
@@ -624,7 +624,7 @@
     ) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Removes an accelerator previously installed through</span>
-    <span class="doccomment">/// [`AccelGroupExtManual::connect()`][crate::prelude::AccelGroupExtManual::connect()].</span>
+    <span class="doccomment">/// [`AccelGroupExtManual::connect_accel_group()`][crate::prelude::AccelGroupExtManual::connect_accel_group()].</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// Since 2.20 `closure` can be [`None`].</span>
     <span class="doccomment">/// ## `closure`</span>
@@ -638,7 +638,7 @@
     <span class="kw">fn</span> <span class="ident">disconnect</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">closure</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">glib::Closure</span><span class="op">&gt;</span>) -&gt; <span class="ident">bool</span>;
 
     <span class="doccomment">/// Removes an accelerator previously installed through</span>
-    <span class="doccomment">/// [`AccelGroupExtManual::connect()`][crate::prelude::AccelGroupExtManual::connect()].</span>
+    <span class="doccomment">/// [`AccelGroupExtManual::connect_accel_group()`][crate::prelude::AccelGroupExtManual::connect_accel_group()].</span>
     <span class="doccomment">/// ## `accel_key`</span>
     <span class="doccomment">/// key value of the accelerator</span>
     <span class="doccomment">/// ## `accel_mods`</span>

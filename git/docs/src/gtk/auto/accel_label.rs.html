@@ -1911,7 +1911,7 @@
     <span class="kw">fn</span> <span class="ident">set_accel</span>(<span class="kw-2">&amp;</span><span class="self">self</span>, <span class="ident">accelerator_key</span>: <span class="ident">u32</span>, <span class="ident">accelerator_mods</span>: <span class="ident">gdk::ModifierType</span>);
 
     <span class="doccomment">/// Sets the closure to be monitored by this accelerator label. The closure</span>
-    <span class="doccomment">/// must be connected to an accelerator group; see [`AccelGroupExtManual::connect()`][crate::prelude::AccelGroupExtManual::connect()].</span>
+    <span class="doccomment">/// must be connected to an accelerator group; see [`AccelGroupExtManual::connect_accel_group()`][crate::prelude::AccelGroupExtManual::connect_accel_group()].</span>
     <span class="doccomment">/// Passing [`None`] for `accel_closure` will dissociate `self` from its</span>
     <span class="doccomment">/// current closure, if any.</span>
     <span class="doccomment">/// ## `accel_closure`</span>

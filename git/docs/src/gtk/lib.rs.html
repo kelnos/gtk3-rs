@@ -237,6 +237,8 @@
 <span id="164">164</span>
 <span id="165">165</span>
 <span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="attribute">#![<span class="ident">allow</span>(<span class="ident">clippy::needless_doctest_main</span>)]</span>
@@ -336,6 +338,7 @@
 <span class="kw">mod</span> <span class="ident">file_chooser_dialog</span>;
 <span class="kw">mod</span> <span class="ident">fixed</span>;
 <span class="kw">mod</span> <span class="ident">flow_box</span>;
+<span class="kw">mod</span> <span class="ident">functions</span>;
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_24&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
 <span class="kw">mod</span> <span class="ident">gesture_stylus</span>;
 <span class="kw">mod</span> <span class="ident">im_context_simple</span>;
@@ -401,6 +404,7 @@
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::target_entry::TargetEntry</span>;
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::tree_sortable::SortColumn</span>;
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::widget::TickCallbackId</span>;
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">functions</span>::<span class="kw-2">*</span>;
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">any</span>(<span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;v3_22&quot;</span>, <span class="ident">feature</span> <span class="op">=</span> <span class="string">&quot;dox&quot;</span>))]</span>
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">pad_action_entry::PadActionEntry</span>;
 </code></pre></div>

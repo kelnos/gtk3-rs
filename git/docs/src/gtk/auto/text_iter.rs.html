@@ -2249,7 +2249,7 @@
     <span class="doccomment">/// Returns whether the character at `self` is within an editable region</span>
     <span class="doccomment">/// of text. Non-editable text is “locked” and can’t be changed by the</span>
     <span class="doccomment">/// user via [`TextView`][crate::TextView]. This function is simply a convenience</span>
-    <span class="doccomment">/// wrapper around [`attributes()`][Self::attributes()]. If no tags applied</span>
+    <span class="doccomment">/// wrapper around [`is_attributes()`][Self::is_attributes()]. If no tags applied</span>
     <span class="doccomment">/// to this text affect editability, `default_setting` will be returned.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// You don’t want to use this function to decide whether text can be</span>
@@ -2851,7 +2851,7 @@
         <span class="kw">unsafe</span> { <span class="ident">from_glib_none</span>(<span class="ident">ffi::gtk_text_iter_get_child_anchor</span>(<span class="self">self</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>)) }
     }
 
-    <span class="doccomment">/// A convenience wrapper around [`attributes()`][Self::attributes()],</span>
+    <span class="doccomment">/// A convenience wrapper around [`is_attributes()`][Self::is_attributes()],</span>
     <span class="doccomment">/// which returns the language in effect at `self`. If no tags affecting</span>
     <span class="doccomment">/// language apply to `self`, the return value is identical to that of</span>
     <span class="doccomment">/// [`default_language()`][crate::default_language()].</span>
