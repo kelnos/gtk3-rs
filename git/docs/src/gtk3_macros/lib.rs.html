@@ -154,8 +154,6 @@
 <span id="81">81</span>
 <span id="82">82</span>
 <span id="83">83</span>
-<span id="84">84</span>
-<span id="85">85</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">mod</span> <span class="ident">attribute_parser</span>;
@@ -189,9 +187,7 @@
 <span class="doccomment">/// use gtk::subclass::prelude::*;</span>
 <span class="doccomment">///</span>
 <span class="doccomment">/// mod imp {</span>
-<span class="doccomment">///     use gtk::prelude::*;</span>
-<span class="doccomment">///     use gtk::glib;</span>
-<span class="doccomment">///     use gtk::subclass::prelude::*;</span>
+<span class="doccomment">///     use super::*;</span>
 <span class="doccomment">///</span>
 <span class="doccomment">///     #[derive(Debug, Default, gtk::CompositeTemplate)]</span>
 <span class="doccomment">///     #[template(file = &quot;composite_template.ui&quot;)]</span>
