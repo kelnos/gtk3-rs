@@ -807,7 +807,7 @@
         }
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_icon_async_future</span>(
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_icon_future</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
     ) -&gt; <span class="ident">Pin</span><span class="op">&lt;</span>
         <span class="ident">Box_</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">std::future::Future</span><span class="op">&lt;</span><span class="ident">Output</span> <span class="op">=</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">gdk_pixbuf::Pixbuf</span>, <span class="ident">glib::Error</span><span class="op">&gt;</span><span class="op">&gt;</span> <span class="op">+</span> <span class="lifetime">&#39;static</span><span class="op">&gt;</span>,
@@ -998,7 +998,7 @@
         }
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_symbolic_async_future</span>(
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_symbolic_future</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         <span class="ident">fg</span>: <span class="kw-2">&amp;</span><span class="ident">gdk::RGBA</span>,
         <span class="ident">success_color</span>: <span class="prelude-ty">Option</span><span class="op">&lt;</span><span class="kw-2">&amp;</span><span class="ident">gdk::RGBA</span><span class="op">&gt;</span>,
@@ -1131,7 +1131,7 @@
         }
     }
 
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_symbolic_for_context_async_future</span>(
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">load_symbolic_for_context_future</span>(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         <span class="ident">context</span>: <span class="kw-2">&amp;</span>(<span class="kw">impl</span> <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">StyleContext</span><span class="op">&gt;</span> <span class="op">+</span> <span class="ident">Clone</span> <span class="op">+</span> <span class="lifetime">&#39;static</span>),
     ) -&gt; <span class="ident">Pin</span><span class="op">&lt;</span>
