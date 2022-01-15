@@ -51,7 +51,7 @@
             </section>
         ` };
 
-        if ("0.15" == "master") {
+        if ("master" == "master") {
             document.body.insertAdjacentHTML(
                 'beforeend',
                 popup("This is the development version. Go to latest stable version.", "stable/latest")
@@ -60,7 +60,7 @@
             fetch('https://gtk-rs.org/gtk3-rs/LATEST_RELEASE_BRANCH')
                 .then(response => response.text())
                 .then(latest_branch => {
-                    if (latest_branch.trim() != "0.15") {
+                    if (latest_branch.trim() != "master") {
                         document.body.insertAdjacentHTML(
                             'beforeend',
                             popup("This version is outdated. Go to latest version.", "stable/latest")
@@ -121,11 +121,11 @@ normally called after opening the application’s initial set of
 windows.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.notify_startup_complete_with_id.html" title="gdk::functions::notify_startup_complete_with_id fn">notify_startup_complete_with_id</a></div><div class="item-right docblock-short"><p>Indicates to the GUI environment that the application has
 finished loading, using a given identifier.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get.html" title="gdk::functions::pango_context_get fn">pango_context_get</a></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for the default GDK screen.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get_for_display.html" title="gdk::functions::pango_context_get_for_display fn">pango_context_get_for_display</a><span class="stab portability" title="This is supported on crate feature `v3_22` only"><code>v3_22</code></span></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for <code>display</code>.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get_for_screen.html" title="gdk::functions::pango_context_get_for_screen fn">pango_context_get_for_screen</a></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for <code>screen</code>.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pixbuf_get_from_surface.html" title="gdk::functions::pixbuf_get_from_surface fn">pixbuf_get_from_surface</a></div><div class="item-right docblock-short"><p>Transfers image data from a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/cairo/surface/struct.Surface.html" title="crate::cairo::Surface"><code>cairo::Surface</code></a> and converts it to an RGB(A)
-representation inside a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a>. This allows you to efficiently read
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get.html" title="gdk::functions::pango_context_get fn">pango_context_get</a></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for the default GDK screen.</p>
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get_for_display.html" title="gdk::functions::pango_context_get_for_display fn">pango_context_get_for_display</a><span class="stab portability" title="This is supported on crate feature `v3_22` only"><code>v3_22</code></span></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for <code>display</code>.</p>
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pango_context_get_for_screen.html" title="gdk::functions::pango_context_get_for_screen fn">pango_context_get_for_screen</a></div><div class="item-right docblock-short"><p>Creates a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/context/struct.Context.html" title="crate::pango::Context"><code>pango::Context</code></a> for <code>screen</code>.</p>
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.pixbuf_get_from_surface.html" title="gdk::functions::pixbuf_get_from_surface fn">pixbuf_get_from_surface</a></div><div class="item-right docblock-short"><p>Transfers image data from a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/cairo/surface/struct.Surface.html" title="crate::cairo::Surface"><code>cairo::Surface</code></a> and converts it to an RGB(A)
+representation inside a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a>. This allows you to efficiently read
 individual pixels from cairo surfaces. For <code>GdkWindows</code>, use
 <code>gdk_pixbuf_get_from_window()</code> instead.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.program_class.html" title="gdk::functions::program_class fn">program_class</a></div><div class="item-right docblock-short"><p>Gets the program class. Unless the program class has explicitly

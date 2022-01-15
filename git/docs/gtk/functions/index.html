@@ -51,7 +51,7 @@
             </section>
         ` };
 
-        if ("0.15" == "master") {
+        if ("master" == "master") {
             document.body.insertAdjacentHTML(
                 'beforeend',
                 popup("This is the development version. Go to latest stable version.", "stable/latest")
@@ -60,7 +60,7 @@
             fetch('https://gtk-rs.org/gtk3-rs/LATEST_RELEASE_BRANCH')
                 .then(response => response.text())
                 .then(latest_branch => {
-                    if (latest_branch.trim() != "0.15") {
+                    if (latest_branch.trim() != "master") {
                         document.body.insertAdjacentHTML(
                             'beforeend',
                             popup("This version is outdated. Go to latest version.", "stable/latest")
@@ -146,7 +146,7 @@ that state field in <code>state</code> and return <a href="https://doc.rust-lang
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.current_event_time.html" title="gtk::functions::current_event_time fn">current_event_time</a></div><div class="item-right docblock-short"><p>If there is a current event and it has a timestamp,
 return that timestamp, otherwise return <code>GDK_CURRENT_TIME</code>.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.debug_flags.html" title="gtk::functions::debug_flags fn">debug_flags</a></div><div class="item-right docblock-short"><p>Returns the GTK+ debug flags.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.default_language.html" title="gtk::functions::default_language fn">default_language</a></div><div class="item-right docblock-short"><p>Returns the <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/pango/language/struct.Language.html" title="crate::pango::Language"><code>pango::Language</code></a> for the default language currently in
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.default_language.html" title="gtk::functions::default_language fn">default_language</a></div><div class="item-right docblock-short"><p>Returns the <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/language/struct.Language.html" title="crate::pango::Language"><code>pango::Language</code></a> for the default language currently in
 effect. (Note that this can change over the life of an
 application.) The default language is derived from the current
 locale. It determines, for example, whether GTK+ uses the
@@ -253,7 +253,7 @@ need to install gvfs to get support for uri schemes such as http://
 or ftp://, as only local files are handled by GIO itself).
 Typical examples are</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.targets_include_image.html" title="gtk::functions::targets_include_image fn">targets_include_image</a></div><div class="item-right docblock-short"><p>Determines if any of the targets in <code>targets</code> can be used to
-provide a <a href="https://gtk-rs.org/gtk-rs-core/stable/0.15/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a>.</p>
+provide a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a>.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.targets_include_rich_text.html" title="gtk::functions::targets_include_rich_text fn">targets_include_rich_text</a></div><div class="item-right docblock-short"><p>Determines if any of the targets in <code>targets</code> can be used to
 provide rich text.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.targets_include_text.html" title="gtk::functions::targets_include_text fn">targets_include_text</a></div><div class="item-right docblock-short"><p>Determines if any of the targets in <code>targets</code> can be used to
