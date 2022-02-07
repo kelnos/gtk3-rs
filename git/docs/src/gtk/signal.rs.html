@@ -481,6 +481,8 @@
 <span id="403">403</span>
 <span id="404">404</span>
 <span id="405">405</span>
+<span id="406">406</span>
+<span id="407">407</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">use</span> <span class="ident">gdk::Rectangle</span>;
@@ -636,7 +638,9 @@
     ) <span class="kw">where</span>
         <span class="ident">T</span>: <span class="ident">IsA</span><span class="op">&lt;</span><span class="ident">Editable</span><span class="op">&gt;</span>,
     {
-        <span class="kw">let</span> <span class="ident">buf</span> <span class="op">=</span> <span class="kw">if</span> <span class="ident">new_text_length</span> <span class="op">!</span><span class="op">=</span> <span class="op">-</span><span class="number">1</span> {
+        <span class="kw">let</span> <span class="ident">buf</span> <span class="op">=</span> <span class="kw">if</span> <span class="ident">new_text_length</span> <span class="op">==</span> <span class="number">0</span> {
+            <span class="kw-2">&amp;</span>[]
+        } <span class="kw">else</span> <span class="kw">if</span> <span class="ident">new_text_length</span> <span class="op">!</span><span class="op">=</span> <span class="op">-</span><span class="number">1</span> {
             <span class="ident">slice::from_raw_parts</span>(<span class="ident">new_text</span> <span class="kw">as</span> <span class="kw-2">*mut</span> <span class="ident">c_uchar</span>, <span class="ident">new_text_length</span> <span class="kw">as</span> <span class="ident">usize</span>)
         } <span class="kw">else</span> {
             <span class="ident">CStr::from_ptr</span>(<span class="ident">new_text</span>).<span class="ident">to_bytes</span>()
@@ -887,5 +891,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (08df8b81d 2022-01-30)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (f624427f8 2022-02-06)" ></div>
 </body></html>
