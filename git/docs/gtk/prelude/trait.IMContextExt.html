@@ -102,7 +102,7 @@
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_input_hints_notify" class="fnname">connect_input_hints_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 <div class="item-spacer"></div>    fn <a href="#tymethod.connect_input_purpose_notify" class="fnname">connect_input_purpose_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>&nbsp;&nbsp;&nbsp;&nbsp;) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a>;
 </details>}</code></pre></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Trait containing all <a href="../struct.IMContext.html" title="IMContext"><code>IMContext</code></a> methods.</p>
-<h2 id="implementors-1" class="section-header"><a href="#implementors-1">Implementors</a></h2>
+<h2 id="implementors-1"><a href="#implementors-1">Implementors</a></h2>
 <p><a href="../struct.IMContextSimple.html" title="crate::IMContextSimple"><code>IMContextSimple</code></a>, <a href="../struct.IMContext.html" title="crate::IMContext"><code>IMContext</code></a>, <a href="../struct.IMMulticontext.html" title="crate::IMMulticontext"><code>IMMulticontext</code></a></p>
 </div></details><h2 id="required-methods" class="small-section-header">Required methods<a href="#required-methods" class="anchor"></a></h2><div class="methods"><details class="rustdoc-toggle" open><summary><div id="tymethod.delete_surrounding" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#153">source</a></div><h4 class="code-header">fn <a href="#tymethod.delete_surrounding" class="fnname">delete_surrounding</a>(&amp;self, offset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, n_chars: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Asks the widget that the input context is attached to to delete
 characters around the cursor position by emitting the
@@ -118,19 +118,19 @@ have deleted all the characters that were requested to be deleted.</p>
 <p>This function is used by an input method that wants to make
 subsitutions in the existing text in response to new input. It is
 not useful for applications.</p>
-<h6 id="offset" class="section-header"><a href="#offset"><code>offset</code></a></h6>
+<h6 id="offset"><a href="#offset"><code>offset</code></a></h6>
 <p>offset from cursor position in chars;
 a negative value means start before the cursor.</p>
-<h6 id="n_chars" class="section-header"><a href="#n_chars"><code>n_chars</code></a></h6>
+<h6 id="n_chars"><a href="#n_chars"><code>n_chars</code></a></h6>
 <p>number of characters to delete.</p>
-<h5 id="returns" class="section-header"><a href="#returns">Returns</a></h5>
+<h5 id="returns"><a href="#returns">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the signal was handled.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.filter_keypress" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#165">source</a></div><h4 class="code-header">fn <a href="#tymethod.filter_keypress" class="fnname">filter_keypress</a>(&amp;self, event: &amp;<a class="struct" href="../../gdk/event_key/struct.EventKey.html" title="struct gdk::event_key::EventKey">EventKey</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></h4></div></summary><div class="docblock"><p>Allow an input method to internally handle key press and release
 events. If this function returns <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a>, then no further processing
 should be done for this key event.</p>
-<h6 id="event" class="section-header"><a href="#event"><code>event</code></a></h6>
+<h6 id="event"><a href="#event"><code>event</code></a></h6>
 <p>the key event</p>
-<h5 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h5>
+<h5 id="returns-1"><a href="#returns-1">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the input method handled the key event.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.focus_in" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#172">source</a></div><h4 class="code-header">fn <a href="#tymethod.focus_in" class="fnname">focus_in</a>(&amp;self)</h4></div></summary><div class="docblock"><p>Notify the input method that the widget to which this
 input context corresponds has gained focus. The input method
@@ -144,14 +144,14 @@ state to reflect this change.</p>
 and a list of attributes to apply to the string.
 This string should be displayed inserted at the insertion
 point.</p>
-<h5 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h5><h6 id="str" class="section-header"><a href="#str"><code>str</code></a></h6>
+<h5 id="returns-2"><a href="#returns-2">Returns</a></h5><h6 id="str"><a href="#str"><code>str</code></a></h6>
 <p>location to store the retrieved
 string. The string retrieved must be freed with <code>g_free()</code>.</p>
-<h6 id="attrs" class="section-header"><a href="#attrs"><code>attrs</code></a></h6>
+<h6 id="attrs"><a href="#attrs"><code>attrs</code></a></h6>
 <p>location to store the retrieved
 attribute list. When you are done with this list, you
 must unreference it with <code>pango_attr_list_unref()</code>.</p>
-<h6 id="cursor_pos" class="section-header"><a href="#cursor_pos"><code>cursor_pos</code></a></h6>
+<h6 id="cursor_pos"><a href="#cursor_pos"><code>cursor_pos</code></a></h6>
 <p>location to store position of cursor (in characters)
 within the preedit string.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.surrounding" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#234">source</a></div><h4 class="code-header">fn <a href="#tymethod.surrounding" class="fnname">surrounding</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">(</a><a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html" title="struct glib::gstring::GString">GString</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.tuple.html">)</a>&gt;</h4></div></summary><div class="docblock"><p>Retrieves context around the insertion point. Input methods
@@ -165,15 +165,15 @@ is available, up to an entire paragraph, by calling
 <a href="trait.IMContextExt.html#tymethod.set_surrounding" title="Self::set_surrounding()"><code>set_surrounding()</code></a>. Note that there is no obligation
 for a widget to respond to the ::retrieve_surrounding signal, so input
 methods must be prepared to function without context.</p>
-<h5 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h5>
+<h5 id="returns-3"><a href="#returns-3">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if surrounding text was provided; in this case
 you must free the result stored in *text.</p>
-<h6 id="text" class="section-header"><a href="#text"><code>text</code></a></h6>
+<h6 id="text"><a href="#text"><code>text</code></a></h6>
 <p>location to store a UTF-8 encoded
 string of text holding context around the insertion point.
 If the function returns <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a>, then you must free the result
 stored in this location with <code>g_free()</code>.</p>
-<h6 id="cursor_index" class="section-header"><a href="#cursor_index"><code>cursor_index</code></a></h6>
+<h6 id="cursor_index"><a href="#cursor_index"><code>cursor_index</code></a></h6>
 <p>location to store byte index of the insertion
 cursor within <code>text</code>.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.reset" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#240">source</a></div><h4 class="code-header">fn <a href="#tymethod.reset" class="fnname">reset</a>(&amp;self)</h4></div></summary><div class="docblock"><p>Notify the input method that a change such as a change in cursor
@@ -183,46 +183,46 @@ method to clear the preedit state.</p>
 <a href="../../gdk/auto/window/struct.Window.html" title="crate::gdk::Window"><code>gdk::Window</code></a> in which the input appears. This window is
 used in order to correctly position status windows, and may
 also be used for purposes internal to the input method.</p>
-<h6 id="window" class="section-header"><a href="#window"><code>window</code></a></h6>
+<h6 id="window"><a href="#window"><code>window</code></a></h6>
 <p>the client window. This may be <a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None" title="None"><code>None</code></a> to indicate
 that the previous client window no longer exists.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_cursor_location" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#258">source</a></div><h4 class="code-header">fn <a href="#tymethod.set_cursor_location" class="fnname">set_cursor_location</a>(&amp;self, area: &amp;<a class="struct" href="../struct.Rectangle.html" title="struct gtk::Rectangle">Rectangle</a>)</h4></div></summary><div class="docblock"><p>Notify the input method that a change in cursor
 position has been made. The location is relative to the client
 window.</p>
-<h6 id="area" class="section-header"><a href="#area"><code>area</code></a></h6>
+<h6 id="area"><a href="#area"><code>area</code></a></h6>
 <p>new location</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_surrounding" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#273">source</a></div><h4 class="code-header">fn <a href="#tymethod.set_surrounding" class="fnname">set_surrounding</a>(&amp;self, text: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, cursor_index: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>)</h4></div></summary><div class="docblock"><p>Sets surrounding context around the insertion point and preedit
 string. This function is expected to be called in response to the
 GtkIMContext::retrieve_surrounding signal, and will likely have no
 effect if called at other times.</p>
-<h6 id="text-1" class="section-header"><a href="#text-1"><code>text</code></a></h6>
+<h6 id="text-1"><a href="#text-1"><code>text</code></a></h6>
 <p>text surrounding the insertion point, as UTF-8.
 the preedit string should not be included within
 <code>text</code>.</p>
-<h6 id="len" class="section-header"><a href="#len"><code>len</code></a></h6>
+<h6 id="len"><a href="#len"><code>len</code></a></h6>
 <p>the length of <code>text</code>, or -1 if <code>text</code> is nul-terminated</p>
-<h6 id="cursor_index-1" class="section-header"><a href="#cursor_index-1"><code>cursor_index</code></a></h6>
+<h6 id="cursor_index-1"><a href="#cursor_index-1"><code>cursor_index</code></a></h6>
 <p>the byte index of the insertion cursor within <code>text</code>.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.set_use_preedit" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#282">source</a></div><h4 class="code-header">fn <a href="#tymethod.set_use_preedit" class="fnname">set_use_preedit</a>(&amp;self, use_preedit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>)</h4></div></summary><div class="docblock"><p>Sets whether the IM context should use the preedit string
 to display feedback. If <code>use_preedit</code> is FALSE (default
 is TRUE), then the IM context may use some other method to display
 feedback, such as displaying it in a child of the root window.</p>
-<h6 id="use_preedit" class="section-header"><a href="#use_preedit"><code>use_preedit</code></a></h6>
+<h6 id="use_preedit"><a href="#use_preedit"><code>use_preedit</code></a></h6>
 <p>whether the IM context should use the preedit string.</p>
 </div></details><div id="tymethod.input_hints" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#285">source</a></div><h4 class="code-header">fn <a href="#tymethod.input_hints" class="fnname">input_hints</a>(&amp;self) -&gt; <a class="struct" href="../struct.InputHints.html" title="struct gtk::InputHints">InputHints</a></h4></div><div id="tymethod.set_input_hints" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#288">source</a></div><h4 class="code-header">fn <a href="#tymethod.set_input_hints" class="fnname">set_input_hints</a>(&amp;self, input_hints: <a class="struct" href="../struct.InputHints.html" title="struct gtk::InputHints">InputHints</a>)</h4></div><div id="tymethod.input_purpose" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#291">source</a></div><h4 class="code-header">fn <a href="#tymethod.input_purpose" class="fnname">input_purpose</a>(&amp;self) -&gt; <a class="enum" href="../enum.InputPurpose.html" title="enum gtk::InputPurpose">InputPurpose</a></h4></div><div id="tymethod.set_input_purpose" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#294">source</a></div><h4 class="code-header">fn <a href="#tymethod.set_input_purpose" class="fnname">set_input_purpose</a>(&amp;self, input_purpose: <a class="enum" href="../enum.InputPurpose.html" title="enum gtk::InputPurpose">InputPurpose</a>)</h4></div><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_commit" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#302">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_commit" class="fnname">connect_commit</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + 'static&gt;(&amp;self, f: F) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::commit signal is emitted when a complete input sequence
 has been entered by the user. This can be a single character
 immediately after a key press or the final result of preediting.</p>
-<h6 id="str-1" class="section-header"><a href="#str-1"><code>str</code></a></h6>
+<h6 id="str-1"><a href="#str-1"><code>str</code></a></h6>
 <p>the completed character(s) entered by the user</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_delete_surrounding" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#317-320">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_delete_surrounding" class="fnname">connect_delete_surrounding</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>, <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::delete-surrounding signal is emitted when the input method
 needs to delete all or part of the context surrounding the cursor.</p>
-<h6 id="offset-1" class="section-header"><a href="#offset-1"><code>offset</code></a></h6>
+<h6 id="offset-1"><a href="#offset-1"><code>offset</code></a></h6>
 <p>the character offset from the cursor position of the text
 to be deleted. A negative value indicates a position before
 the cursor.</p>
-<h6 id="n_chars-1" class="section-header"><a href="#n_chars-1"><code>n_chars</code></a></h6>
+<h6 id="n_chars-1"><a href="#n_chars-1"><code>n_chars</code></a></h6>
 <p>the number of characters to be deleted</p>
-<h5 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h5>
+<h5 id="returns-4"><a href="#returns-4">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the signal was handled.</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_preedit_changed" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#327">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_preedit_changed" class="fnname">connect_preedit_changed</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::preedit-changed signal is emitted whenever the preedit sequence
 currently being entered has changed. It is also emitted at the end of
@@ -236,7 +236,7 @@ starts.</p>
 requires the context surrounding the cursor. The callback should set
 the input method surrounding context by calling the
 <a href="trait.IMContextExt.html#tymethod.set_surrounding" title="Self::set_surrounding()"><code>set_surrounding()</code></a> method.</p>
-<h5 id="returns-5" class="section-header"><a href="#returns-5">Returns</a></h5>
+<h5 id="returns-5"><a href="#returns-5">Returns</a></h5>
 <p><a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="true"><code>true</code></a> if the signal was handled.</p>
-</div></details><div id="tymethod.connect_input_hints_notify" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#352">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_input_hints_notify" class="fnname">connect_input_hints_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div><div id="tymethod.connect_input_purpose_notify" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#355">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_input_purpose_notify" class="fnname">connect_input_purpose_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-IMContextExt" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#358-683">source</a></span><a href="#impl-IMContextExt" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.IMContext.html" title="struct gtk::IMContext">IMContext</a>&gt;&gt; <a class="trait" href="trait.IMContextExt.html" title="trait gtk::prelude::IMContextExt">IMContextExt</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.IMContextExt.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (f624427f8 2022-02-06)" ></div>
+</div></details><div id="tymethod.connect_input_hints_notify" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#352">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_input_hints_notify" class="fnname">connect_input_hints_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div><div id="tymethod.connect_input_purpose_notify" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#355">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_input_purpose_notify" class="fnname">connect_input_purpose_notify</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-IMContextExt" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/auto/im_context.rs.html#358-683">source</a></span><a href="#impl-IMContextExt" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.IMContext.html" title="struct gtk::IMContext">IMContext</a>&gt;&gt; <a class="trait" href="trait.IMContextExt.html" title="trait gtk::prelude::IMContextExt">IMContextExt</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.IMContextExt.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (1e12aef3f 2022-02-13)" ></div>
 </body></html>

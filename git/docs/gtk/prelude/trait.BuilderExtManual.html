@@ -95,9 +95,9 @@ domain.</p>
 <p>It’s not really reasonable to attempt to handle failures of this
 call. The only reasonable thing to do when an error is detected is
 to call <code>g_error()</code>.</p>
-<h6 id="resource_path" class="section-header"><a href="#resource_path"><code>resource_path</code></a></h6>
+<h6 id="resource_path"><a href="#resource_path"><code>resource_path</code></a></h6>
 <p>the path of the resource file to parse</p>
-<h5 id="returns" class="section-header"><a href="#returns">Returns</a></h5>
+<h5 id="returns"><a href="#returns">Returns</a></h5>
 <p>A positive value on success, 0 if an error occurred</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.add_from_string" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#71">source</a></div><h4 class="code-header">fn <a href="#tymethod.add_from_string" class="fnname">add_from_string</a>(&amp;self, buffer: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html" title="struct glib::error::Error">Error</a>&gt;</h4></div></summary><div class="docblock"><p>Parses a string containing a [GtkBuilder UI definition][BUILDER-UI]
 and merges it with the current contents of <code>self</code>.</p>
@@ -108,11 +108,11 @@ and merges it with the current contents of <code>self</code>.</p>
 <p>It’s not really reasonable to attempt to handle failures of this
 call. The only reasonable thing to do when an error is detected is
 to call <code>g_error()</code>.</p>
-<h6 id="buffer" class="section-header"><a href="#buffer"><code>buffer</code></a></h6>
+<h6 id="buffer"><a href="#buffer"><code>buffer</code></a></h6>
 <p>the string to parse</p>
-<h6 id="length" class="section-header"><a href="#length"><code>length</code></a></h6>
+<h6 id="length"><a href="#length"><code>length</code></a></h6>
 <p>the length of <code>buffer</code> (may be -1 if <code>buffer</code> is nul-terminated)</p>
-<h5 id="returns-1" class="section-header"><a href="#returns-1">Returns</a></h5>
+<h5 id="returns-1"><a href="#returns-1">Returns</a></h5>
 <p>A positive value on success, 0 if an error occurred</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.add_objects_from_resource" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#93-97">source</a></div><h4 class="code-header">fn <a href="#tymethod.add_objects_from_resource" class="fnname">add_objects_from_resource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;resource_path: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;object_ids: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html" title="struct glib::error::Error">Error</a>&gt;</h4></div></summary><div class="docblock"><p>Parses a resource file containing a [GtkBuilder UI definition][BUILDER-UI]
 building only the requested objects and merges
@@ -123,11 +123,11 @@ domain.</p>
 <p>If you are adding an object that depends on an object that is not
 its child (for instance a <a href="../struct.TreeView.html" title="crate::TreeView"><code>TreeView</code></a> that depends on its
 <a href="../struct.TreeModel.html" title="crate::TreeModel"><code>TreeModel</code></a>), you have to explicitly list all of them in <code>object_ids</code>.</p>
-<h6 id="resource_path-1" class="section-header"><a href="#resource_path-1"><code>resource_path</code></a></h6>
+<h6 id="resource_path-1"><a href="#resource_path-1"><code>resource_path</code></a></h6>
 <p>the path of the resource file to parse</p>
-<h6 id="object_ids" class="section-header"><a href="#object_ids"><code>object_ids</code></a></h6>
+<h6 id="object_ids"><a href="#object_ids"><code>object_ids</code></a></h6>
 <p>nul-terminated array of objects to build</p>
-<h5 id="returns-2" class="section-header"><a href="#returns-2">Returns</a></h5>
+<h5 id="returns-2"><a href="#returns-2">Returns</a></h5>
 <p>A positive value on success, 0 if an error occurred</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.add_objects_from_string" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#119-120">source</a></div><h4 class="code-header">fn <a href="#tymethod.add_objects_from_string" class="fnname">add_objects_from_string</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;buffer: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;object_ids: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html" title="struct glib::error::Error">Error</a>&gt;</h4></div></summary><div class="docblock"><p>Parses a string containing a [GtkBuilder UI definition][BUILDER-UI]
 building only the requested objects and merges
@@ -137,27 +137,27 @@ them with the current contents of <code>self</code>.</p>
 <p>If you are adding an object that depends on an object that is not
 its child (for instance a <a href="../struct.TreeView.html" title="crate::TreeView"><code>TreeView</code></a> that depends on its
 <a href="../struct.TreeModel.html" title="crate::TreeModel"><code>TreeModel</code></a>), you have to explicitly list all of them in <code>object_ids</code>.</p>
-<h6 id="buffer-1" class="section-header"><a href="#buffer-1"><code>buffer</code></a></h6>
+<h6 id="buffer-1"><a href="#buffer-1"><code>buffer</code></a></h6>
 <p>the string to parse</p>
-<h6 id="length-1" class="section-header"><a href="#length-1"><code>length</code></a></h6>
+<h6 id="length-1"><a href="#length-1"><code>length</code></a></h6>
 <p>the length of <code>buffer</code> (may be -1 if <code>buffer</code> is nul-terminated)</p>
-<h6 id="object_ids-1" class="section-header"><a href="#object_ids-1"><code>object_ids</code></a></h6>
+<h6 id="object_ids-1"><a href="#object_ids-1"><code>object_ids</code></a></h6>
 <p>nul-terminated array of objects to build</p>
-<h5 id="returns-3" class="section-header"><a href="#returns-3">Returns</a></h5>
+<h5 id="returns-3"><a href="#returns-3">Returns</a></h5>
 <p>A positive value on success, 0 if an error occurred</p>
 </div></details><div id="tymethod.connect_signals" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#123-128">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_signals" class="fnname">connect_signals</a>&lt;P:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.FnMut.html" title="trait core::ops::function::FnMut">FnMut</a>(&amp;<a class="struct" href="../struct.Builder.html" title="struct gtk::Builder">Builder</a>, &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;dyn <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a><a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html" title="struct glib::value::Value">Value</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/value/struct.Value.html" title="struct glib::value::Value">Value</a>&gt; + 'static&gt;&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;func: P<br>)</h4></div><details class="rustdoc-toggle" open><summary><div id="tymethod.extend_with_template" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#148-153">source</a></div><h4 class="code-header">fn <a href="#tymethod.extend_with_template" class="fnname">extend_with_template</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;widget: &amp;impl <a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.Widget.html" title="struct gtk::Widget">Widget</a>&gt;, <br>&nbsp;&nbsp;&nbsp;&nbsp;template_type: <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/types/struct.Type.html" title="struct glib::types::Type">Type</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;buffer: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/error/struct.Error.html" title="struct glib::error::Error">Error</a>&gt;</h4></div></summary><div class="docblock"><p>Main private entry point for building composite container
 components from template XML.</p>
 <p>This is exported purely to let gtk-builder-tool validate
 templates, applications have no need to call this function.</p>
-<h6 id="widget" class="section-header"><a href="#widget"><code>widget</code></a></h6>
+<h6 id="widget"><a href="#widget"><code>widget</code></a></h6>
 <p>the widget that is being extended</p>
-<h6 id="template_type" class="section-header"><a href="#template_type"><code>template_type</code></a></h6>
+<h6 id="template_type"><a href="#template_type"><code>template_type</code></a></h6>
 <p>the type that the template is for</p>
-<h6 id="buffer-2" class="section-header"><a href="#buffer-2"><code>buffer</code></a></h6>
+<h6 id="buffer-2"><a href="#buffer-2"><code>buffer</code></a></h6>
 <p>the string to parse</p>
-<h6 id="length-2" class="section-header"><a href="#length-2"><code>length</code></a></h6>
+<h6 id="length-2"><a href="#length-2"><code>length</code></a></h6>
 <p>the length of <code>buffer</code> (may be -1 if <code>buffer</code> is nul-terminated)</p>
-<h5 id="returns-4" class="section-header"><a href="#returns-4">Returns</a></h5>
+<h5 id="returns-4"><a href="#returns-4">Returns</a></h5>
 <p>A positive value on success, 0 if an error occurred</p>
-</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-BuilderExtManual" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#156-340">source</a></span><a href="#impl-BuilderExtManual" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.Builder.html" title="struct gtk::Builder">Builder</a>&gt;&gt; <a class="trait" href="trait.BuilderExtManual.html" title="trait gtk::prelude::BuilderExtManual">BuilderExtManual</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.BuilderExtManual.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (f624427f8 2022-02-06)" ></div>
+</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-BuilderExtManual" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/builder.rs.html#156-340">source</a></span><a href="#impl-BuilderExtManual" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.Builder.html" title="struct gtk::Builder">Builder</a>&gt;&gt; <a class="trait" href="trait.BuilderExtManual.html" title="trait gtk::prelude::BuilderExtManual">BuilderExtManual</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.BuilderExtManual.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (1e12aef3f 2022-02-13)" ></div>
 </body></html>

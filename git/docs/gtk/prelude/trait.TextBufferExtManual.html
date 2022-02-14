@@ -93,11 +93,11 @@ invalidate the <code>start</code> and <code>end</code> iters (or has to revalida
 <a href="trait.TextBufferExt.html#tymethod.apply_tag" title="crate::prelude::TextBufferExt::apply_tag()"><code>TextBufferExt::apply_tag()</code></a>,
 <code>gtk_text_buffer_insert_with_tags()</code>,
 <a href="trait.TextBufferExt.html#tymethod.insert_range" title="crate::prelude::TextBufferExt::insert_range()"><code>TextBufferExt::insert_range()</code></a>.</p>
-<h6 id="tag" class="section-header"><a href="#tag"><code>tag</code></a></h6>
+<h6 id="tag"><a href="#tag"><code>tag</code></a></h6>
 <p>the applied tag</p>
-<h6 id="start" class="section-header"><a href="#start"><code>start</code></a></h6>
+<h6 id="start"><a href="#start"><code>start</code></a></h6>
 <p>the start of the range the tag is applied to</p>
-<h6 id="end" class="section-header"><a href="#end"><code>end</code></a></h6>
+<h6 id="end"><a href="#end"><code>end</code></a></h6>
 <p>the end of the range the tag is applied to</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_delete_range" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#53-56">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_delete_range" class="fnname">connect_delete_range</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::delete-range signal is emitted to delete a range
 from a <a href="../struct.TextBuffer.html" title="crate::TextBuffer"><code>TextBuffer</code></a>.</p>
@@ -108,9 +108,9 @@ both point to the location where text was deleted. Handlers
 which run after the default handler (see <code>g_signal_connect_after()</code>)
 do not have access to the deleted text.</p>
 <p>See also: <a href="trait.TextBufferExt.html#tymethod.delete" title="crate::prelude::TextBufferExt::delete()"><code>TextBufferExt::delete()</code></a>.</p>
-<h6 id="start-1" class="section-header"><a href="#start-1"><code>start</code></a></h6>
+<h6 id="start-1"><a href="#start-1"><code>start</code></a></h6>
 <p>the start of the range to be deleted</p>
-<h6 id="end-1" class="section-header"><a href="#end-1"><code>end</code></a></h6>
+<h6 id="end-1"><a href="#end-1"><code>end</code></a></h6>
 <p>the end of the range to be deleted</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_insert_child_anchor" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#72-75">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_insert_child_anchor" class="fnname">connect_insert_child_anchor</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>, &amp;<a class="struct" href="../struct.TextChildAnchor.html" title="struct gtk::TextChildAnchor">TextChildAnchor</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::insert-child-anchor signal is emitted to insert a
 <a href="../struct.TextChildAnchor.html" title="crate::TextChildAnchor"><code>TextChildAnchor</code></a> in a <a href="../struct.TextBuffer.html" title="crate::TextBuffer"><code>TextBuffer</code></a>.
@@ -120,9 +120,9 @@ not invalidate the <code>location</code> iter (or has to revalidate it).
 The default signal handler revalidates it to be placed after the
 inserted <code>anchor</code>.</p>
 <p>See also: <a href="trait.TextBufferExt.html#tymethod.insert_child_anchor" title="crate::prelude::TextBufferExt::insert_child_anchor()"><code>TextBufferExt::insert_child_anchor()</code></a>.</p>
-<h6 id="location" class="section-header"><a href="#location"><code>location</code></a></h6>
+<h6 id="location"><a href="#location"><code>location</code></a></h6>
 <p>position to insert <code>anchor</code> in <code>textbuffer</code></p>
-<h6 id="anchor" class="section-header"><a href="#anchor"><code>anchor</code></a></h6>
+<h6 id="anchor"><a href="#anchor"><code>anchor</code></a></h6>
 <p>the <a href="../struct.TextChildAnchor.html" title="crate::TextChildAnchor"><code>TextChildAnchor</code></a> to be inserted</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_insert_pixbuf" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#90-93">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_insert_pixbuf" class="fnname">connect_insert_pixbuf</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>, &amp;<a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="struct gdk_pixbuf::auto::pixbuf::Pixbuf">Pixbuf</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::insert-pixbuf signal is emitted to insert a <a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a>
 in a <a href="../struct.TextBuffer.html" title="crate::TextBuffer"><code>TextBuffer</code></a>. Insertion actually occurs in the default handler.</p>
@@ -131,9 +131,9 @@ invalidate the <code>location</code> iter (or has to revalidate it).
 The default signal handler revalidates it to be placed after the
 inserted <code>pixbuf</code>.</p>
 <p>See also: <a href="trait.TextBufferExt.html#tymethod.insert_pixbuf" title="crate::prelude::TextBufferExt::insert_pixbuf()"><code>TextBufferExt::insert_pixbuf()</code></a>.</p>
-<h6 id="location-1" class="section-header"><a href="#location-1"><code>location</code></a></h6>
+<h6 id="location-1"><a href="#location-1"><code>location</code></a></h6>
 <p>position to insert <code>pixbuf</code> in <code>textbuffer</code></p>
-<h6 id="pixbuf" class="section-header"><a href="#pixbuf"><code>pixbuf</code></a></h6>
+<h6 id="pixbuf"><a href="#pixbuf"><code>pixbuf</code></a></h6>
 <p>the <a href="https://gtk-rs.org/gtk-rs-core/git/docs/gdk_pixbuf/auto/pixbuf/struct.Pixbuf.html" title="crate::gdk_pixbuf::Pixbuf"><code>gdk_pixbuf::Pixbuf</code></a> to be inserted</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_insert_text" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#112-115">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_insert_text" class="fnname">connect_insert_text</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>, &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::insert-text signal is emitted to insert text in a <a href="../struct.TextBuffer.html" title="crate::TextBuffer"><code>TextBuffer</code></a>.
 Insertion actually occurs in the default handler.</p>
@@ -144,11 +144,11 @@ inserted text.</p>
 <p>See also:
 <a href="trait.TextBufferExt.html#tymethod.insert" title="crate::prelude::TextBufferExt::insert()"><code>TextBufferExt::insert()</code></a>,
 <a href="trait.TextBufferExt.html#tymethod.insert_range" title="crate::prelude::TextBufferExt::insert_range()"><code>TextBufferExt::insert_range()</code></a>.</p>
-<h6 id="location-2" class="section-header"><a href="#location-2"><code>location</code></a></h6>
+<h6 id="location-2"><a href="#location-2"><code>location</code></a></h6>
 <p>position to insert <code>text</code> in <code>textbuffer</code></p>
-<h6 id="text" class="section-header"><a href="#text"><code>text</code></a></h6>
+<h6 id="text"><a href="#text"><code>text</code></a></h6>
 <p>the UTF-8 text to be inserted</p>
-<h6 id="len" class="section-header"><a href="#len"><code>len</code></a></h6>
+<h6 id="len"><a href="#len"><code>len</code></a></h6>
 <p>length of the inserted text in bytes</p>
 </div></details><details class="rustdoc-toggle" open><summary><div id="tymethod.connect_remove_tag" class="method has-srclink"><div class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#132-135">source</a></div><h4 class="code-header">fn <a href="#tymethod.connect_remove_tag" class="fnname">connect_remove_tag</a>&lt;F:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html" title="trait core::ops::function::Fn">Fn</a>(<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self, &amp;<a class="struct" href="../struct.TextTag.html" title="struct gtk::TextTag">TextTag</a>, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>, &amp;mut <a class="struct" href="../struct.TextIter.html" title="struct gtk::TextIter">TextIter</a>) + 'static&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;f: F<br>) -&gt; <a class="struct" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/struct.SignalHandlerId.html" title="struct glib::signal::SignalHandlerId">SignalHandlerId</a></h4></div></summary><div class="docblock"><p>The ::remove-tag signal is emitted to remove all occurrences of <code>tag</code> from
 a range of text in a <a href="../struct.TextBuffer.html" title="crate::TextBuffer"><code>TextBuffer</code></a>.
@@ -157,11 +157,11 @@ Removal actually occurs in the default handler.</p>
 invalidate the <code>start</code> and <code>end</code> iters (or has to revalidate them).</p>
 <p>See also:
 <a href="trait.TextBufferExt.html#tymethod.remove_tag" title="crate::prelude::TextBufferExt::remove_tag()"><code>TextBufferExt::remove_tag()</code></a>.</p>
-<h6 id="tag-1" class="section-header"><a href="#tag-1"><code>tag</code></a></h6>
+<h6 id="tag-1"><a href="#tag-1"><code>tag</code></a></h6>
 <p>the tag to be removed</p>
-<h6 id="start-2" class="section-header"><a href="#start-2"><code>start</code></a></h6>
+<h6 id="start-2"><a href="#start-2"><code>start</code></a></h6>
 <p>the start of the range the tag is removed from</p>
-<h6 id="end-2" class="section-header"><a href="#end-2"><code>end</code></a></h6>
+<h6 id="end-2"><a href="#end-2"><code>end</code></a></h6>
 <p>the end of the range the tag is removed from</p>
-</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-TextBufferExtManual" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#138-386">source</a></span><a href="#impl-TextBufferExtManual" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.TextBuffer.html" title="struct gtk::TextBuffer">TextBuffer</a>&gt;&gt; <a class="trait" href="trait.TextBufferExtManual.html" title="trait gtk::prelude::TextBufferExtManual">TextBufferExtManual</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.TextBufferExtManual.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (f624427f8 2022-02-06)" ></div>
+</div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor"></a></h2><div class="item-list" id="implementors-list"><section id="impl-TextBufferExtManual" class="impl has-srclink"><span class="rightside"><a class="srclink" href="../../src/gtk/text_buffer.rs.html#138-386">source</a></span><a href="#impl-TextBufferExtManual" class="anchor"></a><h3 class="code-header in-band">impl&lt;O:&nbsp;<a class="trait" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html" title="trait glib::object::IsA">IsA</a>&lt;<a class="struct" href="../struct.TextBuffer.html" title="struct gtk::TextBuffer">TextBuffer</a>&gt;&gt; <a class="trait" href="trait.TextBufferExtManual.html" title="trait gtk::prelude::TextBufferExtManual">TextBufferExtManual</a> for O</h3></section></div><script type="text/javascript" src="../../implementors/gtk/prelude/trait.TextBufferExtManual.js" async></script></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (1e12aef3f 2022-02-13)" ></div>
 </body></html>
