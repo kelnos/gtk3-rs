@@ -456,6 +456,12 @@
 <span id="378">378</span>
 <span id="379">379</span>
 <span id="380">380</span>
+<span id="381">381</span>
+<span id="382">382</span>
+<span id="383">383</span>
+<span id="384">384</span>
+<span id="385">385</span>
+<span id="386">386</span>
 </pre><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.</span>
 
 <span class="kw">use</span> <span class="ident"><span class="kw">crate</span>::TextBuffer</span>;
@@ -772,10 +778,16 @@
             <span class="kw">let</span> <span class="ident">f</span>: <span class="kw-2">&amp;</span><span class="ident">F</span> <span class="op">=</span> <span class="kw-2">&amp;</span><span class="kw-2">*</span>(<span class="ident">f</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">F</span>);
             <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">location_copy</span> <span class="op">=</span> <span class="ident">from_glib_none</span>(<span class="ident">location</span>);
 
+            <span class="kw">let</span> <span class="ident">text</span> <span class="op">=</span> <span class="kw">if</span> <span class="ident">len</span> <span class="op">&lt;</span><span class="op">=</span> <span class="number">0</span> {
+                <span class="kw-2">&amp;</span>[]
+            } <span class="kw">else</span> {
+                <span class="ident">slice::from_raw_parts</span>(<span class="ident">text</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">u8</span>, <span class="ident">len</span> <span class="kw">as</span> <span class="ident">usize</span>)
+            };
+
             <span class="ident">f</span>(
                 <span class="ident">TextBuffer::from_glib_borrow</span>(<span class="ident">this</span>).<span class="ident">unsafe_cast_ref</span>(),
                 <span class="kw-2">&amp;mut</span> <span class="ident">location_copy</span>,
-                <span class="ident">str::from_utf8</span>(<span class="ident">slice::from_raw_parts</span>(<span class="ident">text</span> <span class="kw">as</span> <span class="kw-2">*const</span> <span class="ident">u8</span>, <span class="ident">len</span> <span class="kw">as</span> <span class="ident">usize</span>)).<span class="ident">unwrap</span>(),
+                <span class="ident">str::from_utf8</span>(<span class="ident">text</span>).<span class="ident">unwrap</span>(),
             );
 
             <span class="kw-2">*</span><span class="ident">location</span> <span class="op">=</span> <span class="kw-2">*</span><span class="ident">location_copy</span>.<span class="ident">to_glib_none</span>().<span class="number">0</span>;
@@ -837,5 +849,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.60.0-nightly (08df8b81d 2022-01-30)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.61.0-nightly (3b348d932 2022-02-19)" ></div>
 </body></html>
