@@ -77,7 +77,7 @@
     </nav>
     <nav class="sidebar"><a class="sidebar-logo" href="../../gtk/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
         </a><h2 class="location"><a href="#">Module functions</a></h2><div class="sidebar-elems"><section><div class="block"><ul><li><a href="#functions">Functions</a></li></ul></div></section><div id="sidebar-vars" data-name="functions" data-ty="mod" data-relpath="./"></div><script defer src="./sidebar-items.js"></script></div></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../gtk/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><div class="theme-picker hidden"><button id="theme-picker" aria-label="Pick another theme!" aria-haspopup="menu" title="themes"><img width="22" height="22" alt="Pick another theme!" src="../../brush.svg"></button><div id="theme-choices" role="menu"></div></div><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><a id="settings-menu" href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div></form></nav></div><section id="main-content" class="content"><div class="main-heading">
-    <h1 class="fqn"><span class="in-band">Module <a href="../index.html">gtk</a>::<wbr><a class="mod" href="#">functions</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../../clipboard.svg" width="19" height="18" alt="Copy item path"></button></span></h1><span class="out-of-band"><a class="srclink" href="../../src/gtk/auto/functions.rs.html#5-2569">source</a> · <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span></div><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2>
+    <h1 class="fqn"><span class="in-band">Module <a href="../index.html">gtk</a>::<wbr><a class="mod" href="#">functions</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../../clipboard.svg" width="19" height="18" alt="Copy item path"></button></span></h1><span class="out-of-band"><a class="srclink" href="../../src/gtk/auto/functions.rs.html#5-2325">source</a> · <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span></div><h2 id="functions" class="small-section-header"><a href="#functions">Functions</a></h2>
 <div class="item-table"><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.accel_groups_activate.html" title="gtk::functions::accel_groups_activate fn">accel_groups_activate</a></div><div class="item-right docblock-short"><p>Finds the first accelerator in any <a href="../struct.AccelGroup.html" title="crate::AccelGroup"><code>AccelGroup</code></a> attached
 to <code>object</code> that matches <code>accel_key</code> and <code>accel_mods</code>, and
 activates that accelerator.</p>
@@ -200,7 +200,7 @@ The state <a href="../struct.StateFlags.html#associatedconstant.CHECKED" title="
 activity going on.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.render_arrow.html" title="gtk::functions::render_arrow fn">render_arrow</a></div><div class="item-right docblock-short"><p>Renders an arrow pointing to <code>angle</code>.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.render_background.html" title="gtk::functions::render_background fn">render_background</a></div><div class="item-right docblock-short"><p>Renders the background of an element.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.render_background_get_clip.html" title="gtk::functions::render_background_get_clip fn">render_background_get_clip</a><span class="stab portability" title="This is supported on crate feature `v3_20` only"><code>v3_20</code></span></div><div class="item-right docblock-short"><p>Returns the area that will be affected (i.e. drawn to) when
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.render_background_get_clip.html" title="gtk::functions::render_background_get_clip fn">render_background_get_clip</a></div><div class="item-right docblock-short"><p>Returns the area that will be affected (i.e. drawn to) when
 calling <a href="fn.render_background.html" title="crate::render_background()"><code>render_background()</code></a> for the given <code>context</code> and
 rectangle.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.render_check.html" title="gtk::functions::render_check fn">render_check</a></div><div class="item-right docblock-short"><p>Renders a checkmark (as in a <a href="../struct.CheckButton.html" title="crate::CheckButton"><code>CheckButton</code></a>).</p>
@@ -246,10 +246,7 @@ selections for a widget. Called when widget is being
 destroyed. This function will not generally be
 called by applications.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.set_debug_flags.html" title="gtk::functions::set_debug_flags fn">set_debug_flags</a></div><div class="item-right docblock-short"><p>Sets the GTK+ debug flags.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.show_uri.html" title="gtk::functions::show_uri fn">show_uri</a></div><div class="item-right docblock-short"><p>A convenience function for launching the default application
-to show the uri. Like <a href="fn.show_uri_on_window.html" title="crate::show_uri_on_window()"><code>show_uri_on_window()</code></a>, but takes a screen
-as transient parent instead of a window.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.show_uri_on_window.html" title="gtk::functions::show_uri_on_window fn">show_uri_on_window</a><span class="stab portability" title="This is supported on crate feature `v3_22` only"><code>v3_22</code></span></div><div class="item-right docblock-short"><p>This is a convenience function for launching the default application
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.show_uri_on_window.html" title="gtk::functions::show_uri_on_window fn">show_uri_on_window</a></div><div class="item-right docblock-short"><p>This is a convenience function for launching the default application
 to show the uri. The uri must be of a form understood by GIO (i.e. you
 need to install gvfs to get support for uri schemes such as http://
 or ftp://, as only local files are handled by GIO itself).
@@ -262,10 +259,6 @@ provide rich text.</p>
 provide text.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.targets_include_uri.html" title="gtk::functions::targets_include_uri fn">targets_include_uri</a></div><div class="item-right docblock-short"><p>Determines if any of the targets in <code>targets</code> can be used to
 provide an uri list.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_create_simple_window.html" title="gtk::functions::test_create_simple_window fn">test_create_simple_window</a></div><div class="item-right docblock-short"><p>Create a simple window with window title <code>window_title</code> and
-text contents <code>dialog_text</code>.
-The window will quit any running <a href="fn.main.html" title="crate::main()"><code>main()</code></a>-loop when destroyed, and it
-will automatically be destroyed upon test function teardown.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_find_label.html" title="gtk::functions::test_find_label fn">test_find_label</a></div><div class="item-right docblock-short"><p>This function will search <code>widget</code> and all its descendants for a GtkLabel
 widget with a text string matching <code>label_pattern</code>.
 The <code>label_pattern</code> may contain asterisks “*” and question marks “?” as
@@ -285,37 +278,11 @@ of type <code>widget_type</code> that has a label matching <code>label_pattern</
 to it. This is most useful for automated GUI testing, e.g. to find
 the “OK” button in a dialog and synthesize clicks on it.
 However see <a href="fn.test_find_label.html" title="crate::test_find_label()"><code>test_find_label()</code></a>, <a href="fn.test_find_sibling.html" title="crate::test_find_sibling()"><code>test_find_sibling()</code></a> and
-<a href="fn.test_widget_click.html" title="crate::test_widget_click()"><code>test_widget_click()</code></a> for possible caveats involving the search of
+<code>gtk_test_widget_click()</code> for possible caveats involving the search of
 such widgets and synthesizing widget events.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_register_all_types.html" title="gtk::functions::test_register_all_types fn">test_register_all_types</a></div><div class="item-right docblock-short"><p>Force registration of all core Gtk+ and Gdk object types.
 This allowes to refer to any of those object types via
 <code>g_type_from_name()</code> after calling this function.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_slider_get_value.html" title="gtk::functions::test_slider_get_value fn">test_slider_get_value</a></div><div class="item-right docblock-short"><p>Retrive the literal adjustment value for GtkRange based
-widgets and spin buttons. Note that the value returned by
-this function is anything between the lower and upper bounds
-of the adjustment belonging to <code>widget</code>, and is not a percentage
-as passed in to <a href="fn.test_slider_set_perc.html" title="crate::test_slider_set_perc()"><code>test_slider_set_perc()</code></a>.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_slider_set_perc.html" title="gtk::functions::test_slider_set_perc fn">test_slider_set_perc</a></div><div class="item-right docblock-short"><p>This function will adjust the slider position of all GtkRange
-based widgets, such as scrollbars or scales, it’ll also adjust
-spin buttons. The adjustment value of these widgets is set to
-a value between the lower and upper limits, according to the
-<code>percentage</code> argument.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_spin_button_click.html" title="gtk::functions::test_spin_button_click fn">test_spin_button_click</a></div><div class="item-right docblock-short"><p>This function will generate a <code>button</code> click in the upwards or downwards
-spin button arrow areas, usually leading to an increase or decrease of
-spin button’s value.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_text_get.html" title="gtk::functions::test_text_get fn">test_text_get</a></div><div class="item-right docblock-short"><p>Retrive the text string of <code>widget</code> if it is a GtkLabel,
-GtkEditable (entry and text widgets) or GtkTextView.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_text_set.html" title="gtk::functions::test_text_set fn">test_text_set</a></div><div class="item-right docblock-short"><p>Set the text string of <code>widget</code> to <code>string</code> if it is a GtkLabel,
-GtkEditable (entry and text widgets) or GtkTextView.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_widget_click.html" title="gtk::functions::test_widget_click fn">test_widget_click</a></div><div class="item-right docblock-short"><p>This function will generate a <code>button</code> click (button press and button
-release event) in the middle of the first GdkWindow found that belongs
-to <code>widget</code>.
-For windowless widgets like <a href="../struct.Button.html" title="crate::Button"><code>Button</code></a> (which returns <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a> from
-<a href="../prelude/trait.WidgetExt.html#tymethod.has_window" title="crate::prelude::WidgetExt::has_window()"><code>WidgetExt::has_window()</code></a>), this will often be an
-input-only event window. For other widgets, this is usually widget-&gt;window.
-Certain caveats should be considered when using this function, in
-particular because the mouse pointer is warped to the button click
-location, see <code>gdk_test_simulate_button()</code> for details.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.test_widget_send_key.html" title="gtk::functions::test_widget_send_key fn">test_widget_send_key</a></div><div class="item-right docblock-short"><p>This function will generate keyboard press and release events in
 the middle of the first GdkWindow found that belongs to <code>widget</code>.
 For windowless widgets like <a href="../struct.Button.html" title="crate::Button"><code>Button</code></a> (which returns <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html" title="false"><code>false</code></a> from
@@ -338,5 +305,5 @@ in from the current process. The returned path must be freed with
 <code>gtk_tree_path_free()</code>.</p>
 </div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.tree_set_row_drag_data.html" title="gtk::functions::tree_set_row_drag_data fn">tree_set_row_drag_data</a></div><div class="item-right docblock-short"><p>Sets selection data of target type <code>GTK_TREE_MODEL_ROW</code>. Normally used
 in a drag_data_get handler.</p>
-</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.true_.html" title="gtk::functions::true_ fn">true_</a></div><div class="item-right docblock-short"></div></div></div></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.62.0-nightly (306ba8357 2022-04-05)" ></div>
+</div></div><div class="item-row"><div class="item-left module-item"><a class="fn" href="fn.true_.html" title="gtk::functions::true_ fn">true_</a></div><div class="item-right docblock-short"></div></div></div></section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.62.0-nightly (8f36334ca 2022-04-06)" ></div>
 </body></html>
