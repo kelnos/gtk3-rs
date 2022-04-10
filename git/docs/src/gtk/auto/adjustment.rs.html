@@ -1061,10 +1061,10 @@
     <span class="doccomment">/// However, since the emission of the `signal::Adjustment::changed` signal</span>
     <span class="doccomment">/// is tied to the emission of the `signal::glib::Object::notify` signals of the changed</span>
     <span class="doccomment">/// properties, it’s possible to compress the `signal::Adjustment::changed`</span>
-    <span class="doccomment">/// signals into one by calling [`ObjectExtManual::freeze_notify()`][crate::glib::prelude::ObjectExtManual::freeze_notify()] and</span>
-    <span class="doccomment">/// [`ObjectExtManual::thaw_notify()`][crate::glib::prelude::ObjectExtManual::thaw_notify()] around the calls to the individual setters.</span>
+    <span class="doccomment">/// signals into one by calling [`ObjectExt::freeze_notify()`][crate::glib::prelude::ObjectExt::freeze_notify()] and</span>
+    <span class="doccomment">/// [`ObjectExt::thaw_notify()`][crate::glib::prelude::ObjectExt::thaw_notify()] around the calls to the individual setters.</span>
     <span class="doccomment">///</span>
-    <span class="doccomment">/// Alternatively, using a single [`ObjectExtManual::set()`][crate::glib::prelude::ObjectExtManual::set()] for all the properties</span>
+    <span class="doccomment">/// Alternatively, using a single [`ObjectExt::set()`][crate::glib::prelude::ObjectExt::set()] for all the properties</span>
     <span class="doccomment">/// to change, or using [`configure()`][Self::configure()] has the same effect</span>
     <span class="doccomment">/// of compressing `signal::Adjustment::changed` emissions.</span>
     <span class="doccomment">/// ## `lower`</span>
@@ -1437,5 +1437,5 @@
     }
 }
 </code></pre></div>
-</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.62.0-nightly (8f36334ca 2022-04-06)" ></div>
+</section><section id="search" class="content hidden"></section></div></main><div id="rustdoc-vars" data-root-path="../../../" data-current-crate="gtk" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.62.0-nightly (8bf93e9b6 2022-04-09)" ></div>
 </body></html>
